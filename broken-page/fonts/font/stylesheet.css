@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Noveo Sans';
+    src: url('NoveoSans-Bold.eot');
+    src: local('NoveoSans-Bold'),
+        url('NoveoSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('NoveoSans-Bold.woff2') format('woff2'),
+        url('NoveoSans-Bold.woff') format('woff'),
+        url('NoveoSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noveo Sans XCd';
+    src: url('NoveoSans-BlackXtraCond.eot');
+    src: local('NoveoSans-BlackXtraCond'),
+        url('NoveoSans-BlackXtraCond.eot?#iefix') format('embedded-opentype'),
+        url('NoveoSans-BlackXtraCond.woff2') format('woff2'),
+        url('NoveoSans-BlackXtraCond.woff') format('woff'),
+        url('NoveoSans-BlackXtraCond.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noveo Sans Lt';
+    src: url('NoveoSans-Light.eot');
+    src: local('NoveoSans-Light'),
+        url('NoveoSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('NoveoSans-Light.woff2') format('woff2'),
+        url('NoveoSans-Light.woff') format('woff'),
+        url('NoveoSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noveo Sans Lt';
+    src: url('NoveoSans-Black.eot');
+    src: local('NoveoSans-Black'),
+        url('NoveoSans-Black.eot?#iefix') format('embedded-opentype'),
+        url('NoveoSans-Black.woff2') format('woff2'),
+        url('NoveoSans-Black.woff') format('woff'),
+        url('NoveoSans-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noveo Sans Cd';
+    src: url('NoveoSans-BlackCond.eot');
+    src: local('NoveoSans-BlackCond'),
+        url('NoveoSans-BlackCond.eot?#iefix') format('embedded-opentype'),
+        url('NoveoSans-BlackCond.woff2') format('woff2'),
+        url('NoveoSans-BlackCond.woff') format('woff'),
+        url('NoveoSans-BlackCond.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noveo Sans';
+    src: url('NoveoSans-Book.eot');
+    src: local('NoveoSans-Book'),
+        url('NoveoSans-Book.eot?#iefix') format('embedded-opentype'),
+        url('NoveoSans-Book.woff2') format('woff2'),
+        url('NoveoSans-Book.woff') format('woff'),
+        url('NoveoSans-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

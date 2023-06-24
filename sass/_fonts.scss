@@ -1,0 +1,22 @@
+@font-face {
+    font-family: IranSans;
+    src: url("./fonts/farsi/iransans-light/IRANSansWeb_Light.ttf")format("truetype");
+    src: url("./fonts/farsi/iransans-light/IRANSansWeb_Light.woff")format("woff");
+    src: url("./fonts/farsi/iransans-light/IRANSansWeb_Light.woff2")format("woff2");
+    src: url("./fonts/farsi/iransans-light/IRANSansWeb_Light.svg")format("svg");
+}
+@font-face {
+    font-family: JetBrains;
+    src: url("./fonts/english/jetbrain/JetBrainsMono-Medium.ttf") format("truetype");
+}
+// Post Font Sizes
+$fontSize_tag:12px;
+$fontSize_Icon:19px;
+
+$fontSize_MovieTitle:24px;
+
+$fontSize_GridUpText:12px;
+$fontSize_GridBottomText:14px;
+$fontSize_GridIcon:24px;
+
+$fontSize_ArrowBtn:14px;

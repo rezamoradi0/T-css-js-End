@@ -1,0 +1,73 @@
+@import "color", "layouts", "component", "fonts";
+
+#movie-all-info{
+    @include movie-all-informaiton();
+}
+
+#more-info{
+@include more-information();
+
+#list-go-right,#list-go-left{
+    @include CreateArrowBtn(0deg);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 63px;
+    display: none;
+    .selected{
+        display: block;
+    }
+   // transform: translateY(50%);
+}
+#list-go-left{
+    left: 20px;
+}
+#list-go-right{
+    right: 20px;
+}
+}
+#stars-listbox{
+    @include CreateStarsList();
+    
+    
+    }
+#stars-holder{
+   
+  
+    width: 90%;
+    position: relative;
+    display: flex;
+    height: 150px;
+    left: 5%;
+    overflow: hidden;
+
+}
+#download-box{
+    @include CreateDownloadBox();
+    
+}
+#suggest-box{
+    @include CreateSuggestBox();
+}
+.suggest-list{
+@include CreateUserList();
+
+}
+#suggest-horizontal-list{
+    @include Suggest-horizontal-list();
+
+}
+
+#tags-box{
+    @include TagsBox();
+}
+
+#comment-area{
+    @include Comment-Area();
+}
+.notSmall{
+    display: inline;
+}
+.isSmall{
+    display: none;
+}

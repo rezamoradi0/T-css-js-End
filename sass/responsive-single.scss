@@ -1,0 +1,192 @@
+@import "color";
+#movie-all-info{
+    height: auto;
+}
+@media screen and (max-width: 1248px) {
+    #more-info{
+        margin-top: 50px;
+    }
+    #movie-all-info{
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &>.movieposter{
+            width: 30% ;
+        }
+        &>.movie-info{
+            width: 65% ;
+        }
+        &>.movie-scores{
+            width: 100% ;
+        }
+    }
+    #suggest-box{
+        .suggest-lists{
+            //width:1144px;
+            overflow-x: scroll;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            .suggest-list{
+                width: 300px;
+                scroll-snap-align: start;
+                //width: 30vw;
+                //margin-left: calc(calc(10vw - 100px) /3 );
+            }
+        }
+    }
+}
+@media screen and (max-width: 1024px) {
+    
+          #movie-all-info{
+        .movie-scores{
+            margin-top: 20px;
+        }
+    
+            } 
+         #comment-area .comment-body .comment-likes .comment-like-box{
+   
+            padding: 6px 10px;
+            
+        }
+        #download-box .download-season .season-links .one-season-links{
+            max-height: 95px;
+        }  
+
+        #download-box .download-season .one-season-link-box{
+            grid-template-columns: repeat(5, 1fr);
+        }
+       
+}
+@media screen and (max-width: 800px) {
+    #movie-all-info{
+        .movieposter{
+            width: 45%;
+            margin-top: 50px;
+            
+        }
+        .movie-info{
+            order: 3;
+            width: 100%;
+            .flx-row:first-child{
+                margin-top: 50px;
+                justify-content: flex-end;
+            }
+        }
+        .movie-scores{
+            order: 2;
+            width: 50%;
+            .userlike-bar
+            {
+                justify-content: center;
+                .mizan-like{
+                    margin-right: 0px;
+                }
+            }
+        .buttens {
+              
+            &>span:last-child {
+                order: 1;
+             
+            }
+         }
+        }
+
+    }
+    
+    #comment-header{
+        .comments-logo i{
+            font-size: 28px;
+        }
+        .comment-conditions{
+            p{
+                font-size: 12px;
+                
+            }
+            div .login-btn,div .signup-btn{
+                font-size: 10px;
+            }
+        }
+    }
+    #tags-box{
+  display: none;
+    }
+    #download-box .download-season .one-season-link-box{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .notSmall{
+        display: none;
+    }
+    .isSmall{
+        display: inline;
+    }
+}
+@media screen and (max-width: 750px) {
+    #movie-all-info{
+        align-items: flex-start;
+        justify-content: center;
+        .movie-info{
+            order: 2;
+        }
+        .movie-scores{
+            width: 100%;
+        }
+        .movie-scores .buttens {
+          
+          &>span.my-btn-dark {
+              order: 3;
+           
+          }
+       }
+    }
+}
+@media screen and (max-width: 650px) {
+    #comment-area{
+        .comment-body{
+            flex-direction: column;
+            .comment-likes{
+                margin: auto;
+                .comment-like-box{
+                    margin-right: 0px;
+                }
+            }
+         
+        }
+        #comment-header{
+           justify-content: center;
+            #comments-count,.comments-logo{
+               display: none;
+            }
+        }
+    }
+    .comment-pic{
+        display: none;
+    }
+    #download-box .download-season .one-season-link-box{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #download-box .download-season .season-links .one-season-links .one-season-texts{
+        flex-direction: column;
+        row-gap: 10px;
+        padding-right: 20px;
+    }
+    #download-box .download-season .season-links .one-season-links{
+        max-height: 155px;
+    }  
+
+}
+@media screen and (max-width: 550px) {
+    #movie-all-info{
+        .movieposter{
+            width: 70%;
+        }
+    }
+    #comment-area .comment-body .comment-likes{
+         display: none;
+    }
+    #download-box .download-season .season-links .one-season-links{
+        max-height: 178px;
+    }
+    #download-box .download-season .one-season-link-box{
+        grid-template-columns: repeat(2, 1fr);
+    }
+ 
+}

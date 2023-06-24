@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/style.css" />
+
+    </style>
+  </head>
+  <body id="body">
+    <main>
+      <section id="section">
+    
+        <div class="page darkblue" id="loginpage">
+          <img class="logo" src="../images/icons/Logo-Dark.png" width="100" alt="" />
+          <h1>سلامی دوباره</h1>
+          <p>
+            با استفاده از حساب کاربری خود میتوانید به آرشیو فیلم و سریال دسترسی داشته باشید
+          </p>
+
+          <form action="test">
+            <fieldset>
+              <legend class="small-legend">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </legend>
+              <h2  onclick="focousToInput(this);" class="secend-legend" id="email-tag" required>ایمیل</h2>
+              <input type="email" min="6" required autocomplete="on" name="email" oninput="changeText(this);" data-type="email"  id="email-input"/>
+              <span>
+                <img onclick="focousToInput(this);" class="input-img" src="./images/ui/arroba.png" alt=""
+              /></span>
+            </fieldset>
+            <fieldset class="">
+              <legend >
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </legend>
+              <h2 onclick="focousToInput(this);" class="secend-legend" id="passtag">رمز عبور</h2>
+              <input class="" type="password" minlength="8"  required autocomplete="on"  oninput="changeText(this);" name="password" data-type="password" id="password-input"/>
+              <span onclick="focousToInput(this);"
+                ><img class="input-img" src="./images/ui/padlock.png" alt=""
+              /></span>
+            </fieldset>
+            <div class="splite-two">
+              <div id="remember-me">
+                <input id="remember" type="checkbox"  />
+                <label for="remember">من را به خاطر بسپار</label>
+              </div>
+              <a href="#">فراموشی رمز عبور</a>
+            </div>
+            <input type="submit" name="login" value="ورود" />
+            <button>
+              <img
+                src="./images/ui/icons8-google-96.png"
+                width="20"
+                alt=""
+              />ورود با گوگل
+            </button>
+          </form>
+       
+        
+        </div>
+      </section>
+    </main>
+  
+  <script src="./js/login.js"></script>
+  </body>
+</html>

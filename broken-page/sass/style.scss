@@ -1,0 +1,444 @@
+@import "../../sass/color";
+$darkblue:#005ae6;
+
+@font-face {
+    font-family: JetBrains;
+    src: url("/fonts/english/jetbrain/JetBrainsMono-Medium.ttf")format("truetype");
+    src: url("/fonts/webfonts/JetBrainsMono-Bold.woff2")format("woff2");
+   
+}
+@font-face {
+    font-family: IranSans;
+    src: url("/fonts/farsi/iransans-light/IRANSansWeb_Light.ttf")format("truetype");
+    src: url("/fonts/farsi/iransans-light/IRANSansWeb_Light.woff")format("woff");
+    src: url("/fonts/farsi/iransans-light/IRANSansWeb_Light.woff2")format("woff2");
+    src: url("/fonts/farsi/iransans-light/IRANSansWeb_Light.svg")format("svg");
+}
+
+@font-face {
+    font-family: NovaSans;
+    src: url ("../fonts/font/NoveoSans-Book.ttf")format("truetype");
+    src: url("../fonts/font/NoveoSans-Book.woff")format("woff");
+    src: url("../fonts/font/NoveoSans-Book.woff2")format("woff2");
+}
+@mixin flex($f_d:row, $j_c :center, $a_i :center, $f_f:nowrap) {
+    display: flex;
+    justify-content: $j_c;
+    align-items: $a_i;
+    flex-direction: $f_d;
+    flex-wrap: $f_f;
+
+
+}
+input,button{
+    font-family: IranSans;
+}
+*{
+    font-family: IranSans;
+}
+%section {
+    box-sizing: border-box;
+    margin: 20px auto;
+    width: 80%;
+    overflow: hidden;
+    height: 90vh;
+    padding: 0px 0px;
+  //  border-radius: 20px;
+  //  background-color: $darkblue;
+}
+
+section {
+
+    @include flex(row, center,center, nowrap);
+    @extend %section;
+
+    &>div {
+        width: 50%;
+      //  border: 1px solid black;
+        padding: 10px 20px;
+
+        &.page {
+            @include flex(column, flex-start, center, nowrap);
+            background-color: white;
+            border-radius: 20px;
+            >h1,
+            >p,
+            >form {
+                width: 90%;
+            }
+
+            >h1 {
+                text-align: center;
+                color: $lightText;
+            }
+
+            >p {
+                text-align: justify;
+                color: $lightText;
+            }
+
+
+        }
+
+
+    }
+}
+
+button,
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    height: 42px;
+    margin: 10px auto;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    transition: all 500ms;
+    background-color: $Orange;
+    color: rgb(255, 255, 255);
+    border: 2px dotted $lightOrange;
+    border-top: none;
+    &:hover{
+        border: 2px solid $lightOrange;
+        background-color:$darkOrange;
+    }
+}
+
+button {
+    background-color:$darkColor;
+    transition: all 500ms;
+    color:$lightText;
+    border: none;
+    @include flex(row, center, center, nowrap);
+
+    img {
+        margin: auto 5px;
+    }
+}
+button:hover{
+    background-color: lighten($color: $darkColor, $amount: 10);
+    border:1px solid lighten($color: $darkColor, $amount: 20);
+    
+}
+img.logo {
+    margin-top: 30px;
+    width: 90px;
+    height: auto;
+    //border-radius: 50%;
+   // border: 1px black solid;
+}
+#remember-me{
+    color: $darkText;
+}
+.splite-two {
+    margin: 20px auto;
+    @include flex(row, space-between, flex-start, nowarp);
+
+    &>div,
+    &>a {
+        width: 50%;
+
+    }
+
+    &>a {
+        text-align: right;
+        color: $darkOrange;
+        text-decoration: none;
+    
+    }
+}
+
+fieldset {
+    @include flex(row, flex-end, center, nowarp);
+    position: relative;
+    padding: 0 20px;
+    max-height: 65px;
+    border-radius: 20px;
+    margin: 20px 0px;
+
+    //background-color: #fafbfd;
+    background-color: $darkColor;
+border :3px solid lighten($color: $darkColor, $amount: 10);
+
+&:hover{
+    //box-sizing: border-box;
+    
+    border-right:3px dotted  lighten($color: $darkColor, $amount: 20);
+    border-left:3px dotted  lighten($color: $darkColor, $amount: 20);
+}
+    &:focus-within,&.javascript {
+        background-color: #ffa66c;
+
+        border-top :1px solid $Orange;
+        border-bottom:5px solid $Orange;
+        border-right:3px dotted $Orange;
+        border-left:3px dotted $Orange;
+        legend:first-child{
+
+            display: block;
+            animation: legend1anim;
+            animation-timing-function: linear;
+            animation-duration: 130ms;
+            animation-fill-mode: forwards;
+            &.small-legend{
+                animation: legend2anim;
+      
+                animation-timing-function: linear;
+                animation-duration: 130ms;
+                animation-fill-mode: forwards;
+            }
+
+        }
+      
+        input {
+
+
+            height: 80%;
+
+        }
+
+        h2.secend-legend {
+
+
+            position: absolute;
+            transition: font-size,color;
+            transition-duration: 200ms;
+            transition-timing-function: linear;
+           animation-name: h2anim;
+           animation-timing-function: linear;
+           animation-duration: 300ms;
+           animation-fill-mode: forwards;
+            font-size: 14px;
+            color:$lightText;
+            white-space: nowrap;
+        }
+
+
+    }
+
+    input {
+        box-sizing: border-box;
+        width: 85%;
+        height: 100%;
+        border: none;
+        outline: none;
+        font-size: 20px;
+        background-color: transparent;
+        color: $darkColor;
+        cursor: pointer;
+       // font-family: "JetBrains";
+        // &.focoused{
+        //     height: 80%;
+        // }
+    }
+
+    span {
+        width: 15%;
+        background-color: transparent;
+        img.input-img {
+            height: 24px;
+            display: block;
+            width: auto;
+            margin: auto;
+            color: aquamarine;
+        }
+    }
+
+    legend:first-child {
+        display: none;
+        transition: position, font-size, transform;
+        transition-duration: 800ms;
+        transition-timing-function: linear;
+
+        //   &.focoused{
+        //     display: block;
+        //   }
+    }
+
+    h2.secend-legend {
+        display: block;
+        //color: #008e98;
+        color:$darkText;
+        font-weight: bold;
+        font-size: 13px;
+
+        // &.focoused{
+        //     position: absolute;
+        //     bottom:34px;
+        //     left: 26px;
+        // }
+    }
+
+    @keyframes h2anim {
+        0% {
+            position: absolute;
+            bottom: 0px;
+            right: 19px;
+
+        }
+
+        100% {
+            position: absolute;
+            bottom: 38px;
+            right: 26px;
+        }
+    }
+    @keyframes legend1anim {
+        0%{
+            width: 0px;
+        }
+        100%{
+            width: 70px;
+        }
+    }
+    @keyframes legend2anim {
+        0%{
+            width: 0px;
+        }
+        100%{
+            width: 44px;
+        }
+    }
+}
+.page{
+    position: relative;
+    direction: rtl;
+    padding-top: 0px;
+    border-start-start-radius: 20px;
+   &#lightblue{
+    background-color: $lightBlack;
+    overflow: hidden;
+   }
+    p{
+        font-size: 12px;
+
+    }
+    h1.register{
+      
+        background-color: $lightBlack;
+        color: $lightText;
+        margin-top: 0;
+        width: 100%;
+        padding: 10px 50px;
+    }
+}
+.register-cover{
+    display: none;
+width: 100%;
+height: 100%;
+background-color:$darkColor;
+position: absolute;
+img{
+   height: 50%;
+   width: 100%;
+   margin-top: 50%;
+    object-fit: contain;
+}
+a{
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: $Orange;
+    width: 50%;
+    font-size: 1rem;
+    color: $lightText;
+    position: absolute;
+    top:10%;
+    right: 30%;
+    text-align: center;
+    cursor: pointer;
+}
+}
+.login-cover{
+   
+width: 100%;
+height: 100%;
+background-color:$darkColor;
+position: absolute;
+img{
+   height: 50%;
+   width: 100%;
+   margin-top: 50%;
+    object-fit: contain;
+    
+}
+a{
+
+    background-color: transparent;
+    width: 50%;
+    font-size: 1rem;
+    color: white;
+    position: absolute;
+    top:10%;
+    left: 30%;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px 15px;
+    background-color: $Orange;
+    border-radius: 20px;
+}
+}
+body,div.page.darkblue{
+    background-color:$darkColor;
+
+}
+#login-text{
+    display: none;
+    a{  
+        text-decoration: none;
+    
+        color: $darkText;
+    }
+    padding-left: 20px;
+    width: auto;
+    
+}
+#loginpage{
+    background-color: $lightBlack;
+}
+@media screen and (max-width:1100px) {
+    // #login-cover{
+    //     display: none;
+    // }
+    #lightblue{
+        width: 90%;
+    }
+ 
+    #section{
+    margin: auto;
+ }
+
+//  #register-cover{
+//     display: none;
+//  }
+//  .notActive{
+//     &#loginpage{    display: none;};
+//     &#lightblue{    display: none;};
+    
+//     display: none;
+//  }
+//  .isActive{
+   
+//     &#loginpage{   order: 1};
+//     &#lightblue{    order: 1};
+    
+//  }
+}
+
+@media screen and (max-width:900px) {
+    #loginpage{
+        width: 80%;
+    }
+}
+@media screen and (max-width:600px) {
+    #loginpage{
+        width: 100%;
+    }
+    #section{
+        height: 100%;
+    }
+#lightblue{
+    padding: 10px 0px;
+}
+}

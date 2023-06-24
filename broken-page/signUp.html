@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css" />
+
+    </style>
+  </head>
+  <body id="body">
+    <main>
+      <section id="section">
+        <div class="page" id="lightblue">
+         <!-- <img class="logo" src="./images/other/60.jpg" width="100" alt="" />-->
+          <h1 class="register">فرم ثبت نام</h1>
+          <p>
+            با ثبت نام در سایت شما میتوانید به  <strong>تمامی فیلم ها و سریال ها </strong> دسترسی 
+            داشته باشید و دانلود کنید
+            .
+          </p>
+
+          <form action="test">
+            <fieldset>
+              <legend class="small-legend">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </legend>
+              <h2  onclick="focous_email_r();" class="secend-legend" id="email-tag-r">ایمیل</h2>
+              <input type="email" min="6" required autocomplete="on" name="email" oninput="funtest_r();" id="email-input-r"/>
+              <span>
+                <img onclick="focous_email_r();" class="input-img" src="./images/ui/arroba.png" alt=""
+              /></span>
+            </fieldset>
+            <fieldset class="">
+              <legend >
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </legend>
+              <h2 onclick="focous_pass_r();" class="secend-legend" id="passtag-r">رمز عبور</h2>
+              <input class="" type="password"  minlength="8"  required autocomplete="on"  oninput="funtest2_r();" name="password" id="password-input-r"/>
+              <span onclick="focous_pass_r();"
+                ><img class="input-img" src="./images/ui/padlock.png" alt=""
+              /></span>
+            </fieldset>
+            <fieldset class="">
+              <legend >
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </legend>
+              <h2 onclick="repass_focous_pass();" class="secend-legend" id="repass-tag">تکرار رمز</h2>
+              <input class="" type="password"  minlength="8"  required autocomplete="on" oninput="CheckRepassword();"  onchange="funtest3();" name="password" id="re-password-input"/>
+              <span onclick="repass_focous_pass();"
+                ><img class="input-img" src="./images/ui/fingerprint.svg" alt=""
+              /></span>
+            </fieldset>
+            <div class="splite-two">
+              <div id="remember-me">
+                <input id="remember2" type="checkbox" />
+                <label for="remember2">من را به خاطر بسپار</label>
+              </div>
+              <div id="login-text">
+                
+               <a href="#" onclick="goLogin();">ورود</a>
+              </div>
+             <!-- <a href="#">Recovery Password</a>-->
+            </div>
+            <input type="submit" name="register" value="ثبت نام" />
+            <button>
+              <img
+                src="./images/ui/icons8-google-96.png"
+                width="20"
+                alt=""
+              />ثبت نام با گوگل
+            </button>
+          </form>
+          <div class="register-cover" id="register-cover">
+            <a onclick="goRegister();">حسابی ندارید؟ ثبت نام کنید</a>
+            <img src="../images/icons/userpanel.png" alt="">
+          </div>
+        </div>
+        <div class="page darkblue" id="loginpage">
+          <img class="logo" src="../images/icons/Logo-Dark.png" width="100" alt="" />
+          <h1>سلامی دوباره</h1>
+          <p>
+            با استفاده از حساب کاربری خود میتوانید به آرشیو فیلم و سریال دسترسی داشته باشید
+          </p>
+
+          <form action="test">
+            <fieldset>
+              <legend class="small-legend">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </legend>
+              <h2  onclick="focous_email();" class="secend-legend" id="email-tag" required>ایمیل</h2>
+              <input type="email" min="6" required autocomplete="on" name="email" oninput="funtest();" id="email-input"/>
+              <span>
+                <img onclick="focous_email();" class="input-img" src="./images/ui/arroba.png" alt=""
+              /></span>
+            </fieldset>
+            <fieldset class="">
+              <legend >
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </legend>
+              <h2 onclick="focous_pass();" class="secend-legend" id="passtag">رمز عبور</h2>
+              <input class="" type="password" minlength="8"  required autocomplete="on"  oninput="funtest2();" name="password" id="password-input"/>
+              <span onclick="focous_pass();"
+                ><img class="input-img" src="./images/ui/padlock.png" alt=""
+              /></span>
+            </fieldset>
+            <div class="splite-two">
+              <div id="remember-me">
+                <input id="remember" type="checkbox"  />
+                <label for="remember">من را به خاطر بسپار</label>
+              </div>
+              <a href="#">فراموشی رمز عبور</a>
+            </div>
+            <input type="submit" name="login" value="ورود" />
+            <button>
+              <img
+                src="./images/ui/icons8-google-96.png"
+                width="20"
+                alt=""
+              />ورود با گوگل
+            </button>
+          </form>
+          <div class="login-cover" id="login-cover">
+            <a onclick="goLogin();"> حساب دارید ؟ وارد شوید </a>
+            <img src="../images/icons/userpanel.png" alt="">
+       
+          </div>
+        
+        </div>
+      </section>
+    </main>
+  
+  <script src="./js/login_2.js"></script>
+  </body>
+</html>

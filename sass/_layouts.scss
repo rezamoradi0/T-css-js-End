@@ -1,0 +1,47 @@
+@mixin flex($dir:row, $justi:center, $align:center, $wrap:nowarp) {}
+
+.flex {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+
+    list-style-type: none;
+
+    li {
+        a{
+            text-decoration: inherit;
+            color: inherit;
+        }
+       margin-right: 14px;
+       color: $topMenu;
+       font-size: 12px;
+    }
+}
+
+.width {
+    &-100 {
+        width: 100%;
+    }
+}
+
+.padding {
+    &-xp30 {
+        padding-left: 30px;
+        padding-right: 30px;
+
+    }
+}
+
+.up-menu{
+    li{
+        transition: all 500ms;
+        &:hover{
+            color: $lightText;
+        }
+        &.btn-green:hover{
+            background-color: lighten($color: $darkGreen, $amount: 10);
+        }
+    }
+}
