@@ -79,138 +79,159 @@
     $thisHeight: 380px;
     width: 50%;
     height: $thisHeight;
-   // overflow-x: hidden;
-    overflow-y:visible;
+    // overflow-x: hidden;
+    overflow-y: visible;
     overflow-x: clip;
     position: absolute;
     left: 50%;
     top: calc(50% - $thisHeight/2);
-    >div,>a{
+
+    >div,
+    >a {
         margin-right: 20px;
-        .score{
-          
+
+        .score {
+
             left: 10px;
-            
+
         }
-        .like{
+
+        .like {
             right: 10px;
             left: auto;
-       
+
         }
     }
+
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-   
+
 }
+
 @keyframes poster-name-anim {
-        0%{
-            left:0px;
-        }
-        50%{
-            left: -160%;
-            visibility: hidden;
-        }
-        51%{
-            visibility: hidden;
-            left:100%;
-           
-        }
-        55%{
-            visibility: visible;
-            left:100px;
-        }
-       
-        100%{
-            visibility: visible;
-            left:0px;
-        }
+    0% {
+        left: 0px;
+    }
+
+    50% {
+        left: -160%;
+        visibility: hidden;
+    }
+
+    51% {
+        visibility: hidden;
+        left: 100%;
+
+    }
+
+    55% {
+        visibility: visible;
+        left: 100px;
+    }
+
+    100% {
+        visibility: visible;
+        left: 0px;
+    }
 }
+
 @mixin move-poster() {
     position: relative;
     display: flex;
     height: 340px;
-   //width: 202px;
+    //width: 202px;
     background-color: black;
     flex-direction: column;
     margin-bottom: 30px;
 
-    
-    &:hover{
-      
-        .movie-poster-link{
+
+    &:hover {
+
+        .movie-poster-link {
             text-overflow: clip;
             position: relative;
-            span{
+
+            span {
                 position: absolute;
                 animation-name: poster-name-anim;
                 animation-duration: 6s;
                 animation-iteration-count: infinite;
-                 animation-timing-function: linear;
-                 
+                animation-timing-function: linear;
+
 
             }
         }
-        .poster{
+
+        .poster {
             border-top-left-radius: 10px;
             border-top: 2px solid rgba($color: $lightOrange, $alpha: 0.8);
-        border-left:   2px solid $lightOrange;
-        border-bottom: 1px solid rgba($color: $lightOrange, $alpha: 0.5);
-        border-right:1px solid rgba($color: $lightOrange, $alpha: 0.3);;
+            border-left: 2px solid $lightOrange;
+            border-bottom: 1px solid rgba($color: $lightOrange, $alpha: 0.5);
+            border-right: 1px solid rgba($color: $lightOrange, $alpha: 0.3);
+            ;
             //border: 1px solid $lightOrange;
-         
+
         }
-       
+
     }
-  
-    &.react:hover{
-        .movie-poster-link{
+
+    &.react:hover {
+        .movie-poster-link {
             height: auto;
             width: 100%;
-           
+
             white-space: normal;
-           overflow: visible;
+            overflow: visible;
         }
-        
+
     }
-    &.in-pages,&.in-home{
+
+    &.in-pages,
+    &.in-home {
         width: 170px;
         height: 300px;
-      
-     
-       &:hover {
-        .poster{
-            opacity: 1;
-        }
-        .movie-poster-link{
-         
-            height: 16px;
+
+
+        &:hover {
+            .poster {
+                opacity: 1;
+            }
+
+            .movie-poster-link {
+
+                height: 16px;
                 width: 100%;
-               margin-top: 20px;
+                margin-top: 20px;
                 white-space: break-spaces;
                 line-break: strict;
                 white-space: normal;
-               overflow: visible;
+                overflow: visible;
             }
 
-            
-       }
+
+        }
     }
-    &.vitrin{
+
+    &.vitrin {
         height: 300px;
         scroll-snap-align: start;
         background-color: transparent;
-        .score{
+
+        .score {
             bottom: 10px;
         }
-        .like{
+
+        .like {
             bottom: 10px;
         }
-        
+
     }
-    .movie-poster-link{
-        span{
+
+    .movie-poster-link {
+        span {
             transition: all 500ms;
         }
+
         text-decoration: none;
         color: $lightText;
         margin-top: 10px;
@@ -221,13 +242,14 @@
         align-self: center;
         white-space: nowrap;
         text-align: left;
-       text-overflow: ellipsis;
-       overflow: hidden;
-       transition:  all 500ms;
-       
-       
-        
+        text-overflow: ellipsis;
+        overflow: hidden;
+        transition: all 500ms;
+
+
+
     }
+
     .poster {
         height: 100%;
         width: auto;
@@ -242,15 +264,17 @@
         cursor: pointer;
 
         aspect-ratio: 9/16;
-        &.avtice{
-            opacity: 1 ;
-        }
-        &:hover{
+
+        &.avtice {
             opacity: 1;
-          
         }
-      
-  
+
+        &:hover {
+            opacity: 1;
+
+        }
+
+
     }
 
     .playicon {
@@ -289,12 +313,12 @@
 
     .isSubtitle {
         position: absolute;
-        $thisWidth:75px;
-        $thisHieght:33px;
+        $thisWidth: 75px;
+        $thisHieght: 33px;
         //left:calc( 50% - $thisWidth/2) ;
         left: 50%;
         transform: translateX(-50%);
-        top:  - calc($thisHieght/2) ;
+        top: - calc($thisHieght/2);
         display: inline-flex;
         justify-content: center;
         align-items: center;
@@ -303,80 +327,87 @@
         padding: 4px 12px;
         background-color: $Orange;
         color: $lightText;
-      
-        span{
+
+        span {
             text-align: center;
-            
+
             font-size: 11px;
         }
-        
+
 
     }
-   .isDubbed{
-            position: absolute;
-            $thisWidth:75px;
-            $thisHieght:33px;
-            //left:calc( 50% - $thisWidth/2) ;
-            left: 50%;
-            transform: translateX(-50%);
-            top:  - calc($thisHieght/2) ;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 20px;
-            border: 4px solid $darkColor;
-            padding: 4px 12px;
-            background-color: $darkGreen;
-            color: $lightText;
-          
-            span{
-                text-align: center;
-                
-                font-size: 11px;
-            }
+
+    .isDubbed {
+        position: absolute;
+        $thisWidth: 75px;
+        $thisHieght: 33px;
+        //left:calc( 50% - $thisWidth/2) ;
+        left: 50%;
+        transform: translateX(-50%);
+        top: - calc($thisHieght/2);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        border: 4px solid $darkColor;
+        padding: 4px 12px;
+        background-color: $darkGreen;
+        color: $lightText;
+
+        span {
+            text-align: center;
+
+            font-size: 11px;
         }
-        .isOrginal{
-            position: absolute;
-            $thisWidth:75px;
-            $thisHieght:33px;
-            //left:calc( 50% - $thisWidth/2) ;
-            left: 50%;
-            transform: translateX(-50%);
-            top:  - calc($thisHieght/2) ;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 20px;
-            border: 4px solid $darkColor;
-            padding: 4px 12px;
-            background-color: darken($color: $lightText, $amount:10);
-            color: $darkColor;
-          
-            span{
-                text-align: center;
-                
-                font-size: 11px;
-            }
+    }
+
+    .isOrginal {
+        position: absolute;
+        $thisWidth: 75px;
+        $thisHieght: 33px;
+        //left:calc( 50% - $thisWidth/2) ;
+        left: 50%;
+        transform: translateX(-50%);
+        top: - calc($thisHieght/2);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        border: 4px solid $darkColor;
+        padding: 4px 12px;
+        background-color: darken($color: $lightText, $amount:10);
+        color: $darkColor;
+
+        span {
+            text-align: center;
+
+            font-size: 11px;
         }
-    .score{
+    }
+
+    .score {
         display: flex;
         justify-content: flex-start;
         align-items: center;
         position: absolute;
-   
+
         right: 10px;
-        bottom:40px;
-        span:first-child, span:nth-child(2){
+        bottom: 40px;
+
+        span:first-child,
+        span:nth-child(2) {
             font-size: 24px;
             color: $lightText;
 
         }
-        span:nth-child(3){
+
+        span:nth-child(3) {
             font-size: 16px;
             color: $lightText;
         }
     }
-    .like{
+
+    .like {
         color: $lightOrange;
         position: absolute;
         padding: 6px 10px;
@@ -386,13 +417,14 @@
         background-color: $likeBackground;
         font-size: 14px;
     }
- 
+
 }
+
 @mixin search-engine {
 
     box-sizing: border-box;
     width: 95%;
-   
+
     position: absolute;
     transform: translateY(-50%);
     left: 2.5%;
@@ -400,9 +432,11 @@
     border-radius: 60px;
     padding: 4px 20px;
     font-size: 0.7rem;
-   // font-size: 0.8rem;
-    &>ul , &>ul>li>ul{
-        margin:4px auto 4px;
+
+    // font-size: 0.8rem;
+    &>ul,
+    &>ul>li>ul {
+        margin: 4px auto 4px;
         display: flex;
         flex-direction: row-reverse;
         flex-wrap: nowrap;
@@ -413,57 +447,67 @@
         padding-left: 0px;
     }
 
-    li{
-      cursor: pointer;
-        &>ul>li.selected-item{
+    li {
+        cursor: pointer;
+
+        &>ul>li.selected-item {
             background-color: $darkOrange;
         }
-        i{
-          
+
+        i {
+
             font-size: 25px;
             margin: auto 8px;
             vertical-align: sub;
             color: $darkText;
-           transition: color 500ms;
-              &.fa-chevron-down,&.fa-sliders-simple{
-                
+            transition: color 500ms;
+
+            &.fa-chevron-down,
+            &.fa-sliders-simple {
+
                 font-size: 18px;
                 margin: auto 8px;
                 vertical-align: sub;
                 color: $lightText;
                 background-color: rgba($color: white, $alpha: 0.08);
                 border-radius: 50%;
-              } 
-            
+            }
+
         }
+
         font-size: transparent;
         display: flex;
         align-items: center;
         @include search-engin-item();
     }
 
-    li.orange-btn{
+    li.orange-btn {
         background-color: $darkOrange;
         border-radius: 24px;
         padding: 20px 40px;
     }
-    li.search-option{
+
+    li.search-option {
         background-color: $darkColor;
         border-radius: 24px;
         padding: 20px 40px;
     }
-    li.is-ul{
-     background-color: $darkColor;
-     border-radius: 24px;
-      ul,li{
-        cursor: pointer;
-        background-color: transparent;
-        border-radius: 40px;
-      }
+
+    li.is-ul {
+        background-color: $darkColor;
+        border-radius: 24px;
+
+        ul,
+        li {
+            cursor: pointer;
+            background-color: transparent;
+            border-radius: 40px;
+        }
     }
-   
+
 }
-@mixin search-engin-item(){
+
+@mixin search-engin-item() {
     box-sizing: border-box;
     color: white;
 
@@ -473,110 +517,120 @@
 
 }
 
-@mixin  horiznotal-poster(){
+@mixin horiznotal-poster() {
 
-        position: relative;
-        background-color: $darkColor;
-        display: block;
-        margin-bottom: 20px;
-        margin-top: 15px;
-       &>img{
-           width: 100%;
-           height: 100%;
-           object-fit: cover;
-           object-position: center;
-           border-radius: 30px;
-           transition: opacity;
-           transition-duration: 300ms;
-           transition-delay: 50ms;
-           transition-timing-function: ease-in;
-           &:hover{
-              opacity: 0.75;
-               //  filter: drop-shadow(black);
-           }
-       }
-      
-    
-       .hor-like{
-           position: absolute;
-           padding: 6px 10px;
-           border-radius: 10px;
-           color: $lightOrange;
-           background-color: $likeBackground;
-           bottom: 5%;
-           left:5%;
-    
-       }
-       .hor-info{
-           position: absolute;
-           right:5%;
-           bottom: 0;
-           transform: translateY(30%);
-           display: flex;
-           flex-direction:row;
-           flex-wrap: nowrap;
-           justify-content: center;
-           align-items: center;
-           background-color: transparent;
-           width: max(12%,170px);
-           padding: 6px 0px;
-           border-radius: 14px;
-           font-size: 0.8rem;
-    
-           background-color: $darkColor;
-           span{
-               color: white;
-               border-radius: 8px;
-               width: 50%;
-               text-align: center;
-          
-               white-space: nowrap;
-           }
-           .episode{
-               margin: auto 6px;
-               padding: 3px 10px;
-               background-color: $darkOrange;
-               direction: rtl;
-           }
-           .season{
-               background-color: transparent;
-           }
-       }
+    position: relative;
+    background-color: $darkColor;
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 15px;
+
+    &>img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 30px;
+        transition: opacity;
+        transition-duration: 300ms;
+        transition-delay: 50ms;
+        transition-timing-function: ease-in;
+
+        &:hover {
+            opacity: 0.75;
+            //  filter: drop-shadow(black);
         }
+    }
+
+
+    .hor-like {
+        position: absolute;
+        padding: 6px 10px;
+        border-radius: 10px;
+        color: $lightOrange;
+        background-color: $likeBackground;
+        bottom: 5%;
+        left: 5%;
+
+    }
+
+    .hor-info {
+        position: absolute;
+        right: 5%;
+        bottom: 0;
+        transform: translateY(30%);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        width: max(12%, 170px);
+        padding: 6px 0px;
+        border-radius: 14px;
+        font-size: 0.8rem;
+
+        background-color: $darkColor;
+
+        span {
+            color: white;
+            border-radius: 8px;
+            width: 50%;
+            text-align: center;
+
+            white-space: nowrap;
+        }
+
+        .episode {
+            margin: auto 6px;
+            padding: 3px 10px;
+            background-color: $darkOrange;
+            direction: rtl;
+        }
+
+        .season {
+            background-color: transparent;
+        }
+    }
+}
 
 
 @mixin updates-poster() {
     position: relative;
- .poster-link{
-    text-decoration: none;
-   
-    color: white;
-    width: 100%;
-    font-size: 1.1rem;
-       // text-align: left;
-   text-align: center;
-display: flex;
-    padding-left: 22px;
-   // margin-top: 2rem;
-    font-weight: 300;
-    margin-left: 20px;
-    min-height: 50px;
- }
+
+    .poster-link {
+        text-decoration: none;
+
+        color: white;
+        width: 100%;
+        font-size: 1.1rem;
+        // text-align: left;
+        text-align: center;
+        display: flex;
+        padding-left: 22px;
+        // margin-top: 2rem;
+        font-weight: 300;
+        margin-left: 20px;
+        min-height: 50px;
+    }
 
 }
+
 @mixin updates-main() {
     padding-right: 40px;
     padding-left: 40px;
     width: 100%;
     display: grid;
-    gap:10px 10px;
-    grid-template-columns: repeat(4,1fr);
+    gap: 10px 10px;
+    grid-template-columns: repeat(4, 1fr);
     margin-top: 10px;
-    background-color:transparent;
-    .horiznotal-poster{
-       // height: 100%;
+    background-color: transparent;
+
+    .horiznotal-poster {
+        // height: 100%;
         width: 100%;
-        &>img{
+
+        &>img {
             aspect-ratio: 16 / 9;
         }
     }
@@ -590,28 +644,32 @@ display: flex;
     align-items: center;
     padding: 0px 30px;
     margin: 90px auto 30px;
-    color:  $darkText;
-    .horizontal-logo{
+    color: $darkText;
+
+    .horizontal-logo {
         font-size: 2rem;
         color: $lightOrange;
     }
-    .horizontal-subject{
+
+    .horizontal-subject {
         margin: auto 20px;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-      span:first-child{
-        font-size: 1.15rem;
-        color: $lightText;
-        font-weight: bold;
-      }
-      span:nth-child(2){
-        font-size: 0.8rem;
-      }
+
+        span:first-child {
+            font-size: 1.15rem;
+            color: $lightText;
+            font-weight: bold;
+        }
+
+        span:nth-child(2) {
+            font-size: 0.8rem;
+        }
     }
 }
 
-@mixin horizontal-list-header(){
+@mixin horizontal-list-header() {
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
@@ -620,19 +678,22 @@ display: flex;
     color: $lightText;
     padding: 5px 40px;
     margin: 20px auto 30px;
-    .horizontal-list-header-text{
+
+    .horizontal-list-header-text {
         font-weight: bold;
     }
-   
+
 }
-.get-full-list{
+
+.get-full-list {
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: $lightText;
     font-size: 0.7rem;
     text-decoration: none;
-    span:first-child{
+
+    span:first-child {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -644,41 +705,44 @@ display: flex;
         background-color: rgba($color: $lightText, $alpha: 0.08);
         border-radius: 50%;
     }
- 
+
 }
-@mixin horizontal-list(){
+
+@mixin horizontal-list() {
     margin-bottom: 70px;
     padding: 0px 40px;
     width: 100%;
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: repeat(7,1fr);
+    grid-template-columns: repeat(7, 1fr);
     $thisHeight: 300px;
     column-gap: 20px;
     height: $thisHeight;
-//    // overflow-x: hidden;
-//         overflow-y:visible;
-//         overflow-x: clip;
-   
+    //    // overflow-x: hidden;
+    //         overflow-y:visible;
+    //         overflow-x: clip;
+
     &.have-rect {
 
-    @include  have-rect();
+        @include have-rect();
     }
-    >div{
-       
+
+    >div {
+
         //width: 100%;
         //height: 300px;
         //another mixin for size is activeated
-        .poster{
+        .poster {
             width: 100%;
             height: 100%;
-            opacity:1;
+            opacity: 1;
             // &:hover{
             //     opacity  :0.4;
             // }
         }
     }
 }
+
 @mixin horizontal-list-rect-header {
     display: flex;
     flex-direction: column;
@@ -686,77 +750,89 @@ display: flex;
     align-items: flex-end;
 
     color: white;
-  
-    h2{
+
+    h2 {
         text-align: right;
 
     }
-    span:first-child{
+
+    span:first-child {
         margin: 16px auto;
     }
-    hr{
+
+    hr {
         width: 40%;
         border: 1px solid $lightOrange;
         margin-right: 0px;
     }
 }
+
 @mixin have-rect {
-    grid-template-columns: repeat(6,1fr) 2fr;
-   // grid-template-columns: repeat(6,1fr) 300px;
+    grid-template-columns: repeat(6, 1fr) 2fr;
+    // grid-template-columns: repeat(6,1fr) 300px;
     margin: 80px auto 70px;
 
 }
+
 //End Main Page AND Main Css
 // Post Page 
 
-@mixin movie-all-informaiton(){
+@mixin movie-all-informaiton() {
     direction: rtl;
     padding: 0px 50px;
     width: 100%;
-   // height: 400px;
+    // height: 400px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
-    &>div{
+
+    &>div {
         height: 100%;
     }
-    &>.movieposter{
-     @include movie-first-col();
+
+    &>.movieposter {
+        @include movie-first-col();
 
     }
-    &>div:nth-of-type(2),div:nth-of-type(3){
+
+    &>div:nth-of-type(2),
+    div:nth-of-type(3) {
         //flex-grow: 2;
-      
+
     }
 
-    &>.movie-info{
+    &>.movie-info {
         @include movie-middle-col();
         width: 45%;
     }
-    &>.movie-scores{
-       @include movie-left-col();
-       width: 35%;
+
+    &>.movie-scores {
+        @include movie-left-col();
+        width: 35%;
     }
 }
-@mixin movie-first-col{
+
+@mixin movie-first-col {
     //flex-grow: 1;
     width: 20%;
     margin-left: 20px;
     position: relative;
-    img{
+
+    img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center;
         border-radius: 30px;
     }
+
     .isSubtitle {
         position: absolute;
-        $thisWidth:75px;
-        $thisHieght:33px;
-        left:calc( 50% - $thisWidth/2) ;
-        top:  - calc($thisHieght/2) ;
+        $thisWidth: 75px;
+        $thisHieght: 33px;
+        left: calc(50% - $thisWidth/2);
+        top: - calc($thisHieght/2);
         display: inline-flex;
         justify-content: center;
         align-items: center;
@@ -765,120 +841,141 @@ display: flex;
         padding: 4px 12px;
         background-color: $Orange;
         color: $lightText;
-      
-        span{
+
+        span {
             text-align: center;
-            
+
             font-size: 11px;
         }
 
     }
-  
+
 }
-@mixin movie-middle-col{
+
+@mixin movie-middle-col {
     padding: 0px 16px;
     color: $lightText;
-    &>div{
+
+    &>div {
         width: 100%;
     }
-    .flx-row{
+
+    .flx-row {
         display: flex;
         flex-flow: row;
-        &:first-of-type{
-            .icn{
-                margin :auto 15px;
+
+        &:first-of-type {
+            .icn {
+                margin: auto 15px;
                 font-size: $fontSize_Icon;
             }
         }
     }
-    .flx-col{
+
+    .flx-col {
         display: flex;
         flex-flow: column;
     }
-    .grd{
-      @include movie-middle-grid();
+
+    .grd {
+        @include movie-middle-grid();
     }
-    .genres{
+
+    .genres {
         display: flex;
         justify-content: flex-start;
         align-items: center;
         flex-wrap: wrap;
     }
-    .tag{
+
+    .tag {
         @include movie-middle-tags();
         white-space: nowrap;
     }
-    .genres span:first-child{
+
+    .genres span:first-child {
         color: $tagTextColor;
         font-size: $fontSize_tag;
     }
-    .movie-title{
-        p{
+
+    .movie-title {
+        p {
             font-size: $fontSize_MovieTitle;
             margin-bottom: 0px;
         }
-        span{
+
+        span {
             color: $tagTextColor;
             margin-bottom: 20px;
         }
     }
-    .movie-state{
+
+    .movie-state {
         align-items: center;
-        p{
+
+        p {
             font-size: $fontSize_GridBottomText;
             color: $tagTextColor;
         }
-    span{
-   
-    margin-left: 10px;
-    i{
-        border-radius: 50%;
-        color: $movieStateIcon;
-        background-color: $movieStateIcon_Bg;
-        padding: 4px;
 
-    }
-       
-    }
+        span {
+
+            margin-left: 10px;
+
+            i {
+                border-radius: 50%;
+                color: $movieStateIcon;
+                background-color: $movieStateIcon_Bg;
+                padding: 4px;
+
+            }
+
+        }
     }
 }
-@mixin movie-middle-tags{
-color: $tagTextColor;
-border-radius: 10px;
-padding: 5px;
-border: 1px solid $darkText;
-font-size: $fontSize_tag;
-margin: auto 4px;
-transition: color border;
-transition-duration: 500ms;
-transition-delay: 100ms;
-text-decoration: none;
-&:hover{
-color: $Orange;
-border-color: $darkOrange;
-cursor: pointer;
+
+@mixin movie-middle-tags {
+    color: $tagTextColor;
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px solid $darkText;
+    font-size: $fontSize_tag;
+    margin: auto 4px;
+    transition: color border;
+    transition-duration: 500ms;
+    transition-delay: 100ms;
+    text-decoration: none;
+
+    &:hover {
+        color: $Orange;
+        border-color: $darkOrange;
+        cursor: pointer;
+    }
 }
-}
-@mixin movie-middle-grid(){
+
+@mixin movie-middle-grid() {
     margin-top: 20px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     row-gap: 12px;
-    .info-item{
+
+    .info-item {
         display: flex;
         flex-direction: row;
         align-items: center;
-        &>div>span:first-of-type{
+
+        &>div>span:first-of-type {
             color: $tagTextColor;
             font-size: $fontSize_GridUpText;
             margin-bottom: 4px;
         }
-        &>div>span:nth-child(2){
+
+        &>div>span:nth-child(2) {
             color: $tagTextColor;
             font-size: $fontSize_GridBottomText;
         }
 
-        .item-icon{
+        .item-icon {
             color: $Orange;
             font-size: $fontSize_GridIcon;
             width: 35px;
@@ -888,8 +985,8 @@ cursor: pointer;
     }
 }
 
-@mixin movie-left-col(){
-    .the-story{
+@mixin movie-left-col() {
+    .the-story {
         margin-top: 60px;
         color: $lightText;
         font-size: 13px;
@@ -897,233 +994,267 @@ cursor: pointer;
         line-height: 26px;
         font-weight: 400;
     }
-.scores-bar{
-    justify-content: flex-start;
-    align-items: center;
-   display: flex;
-   flex-direction: row-reverse;
-    .imdb-rate{
-        img{
-            width: 60px;
+
+    .scores-bar {
+        justify-content: flex-start;
+        align-items: center;
+        display: flex;
+        flex-direction: row-reverse;
+
+        .imdb-rate {
+            img {
+                width: 60px;
+            }
+
+            .imdb-score {
+                color: white;
+
+                span:first-child {
+                    font-size: 16px;
+                }
+
+                span:last-child {
+
+                    font-size: 3rem;
+                }
+            }
+
         }
-        .imdb-score{
+
+        .imdb-votes {
+            padding: 5px;
+            border: 1px solid $darkText;
+            border-radius: 10px;
+            color: $tagTextColor;
+            font-size: $fontSize_tag;
+            margin-left: 10px;
+
+            span:first-child {}
+
+            span:last-child {
+                vertical-align: text-bottom;
+            }
+        }
+
+        .meter-score,
+        .roten-score {
+            margin-left: 10px;
             color: white;
-           
-            span:first-child{
-                font-size: 16px;
+            display: flex;
+            align-items: center;
+
+            img {
+                height: 24px;
+                width: auto;
             }
-            span:last-child{
-               
-                font-size: 3rem;
+
+            span {
+                font-size: 14px;
+                margin-left: 10px;
             }
         }
 
-    }
-    .imdb-votes{
-        padding: 5px;
-        border: 1px solid $darkText;
-        border-radius: 10px;
-        color: $tagTextColor;
-        font-size: $fontSize_tag;
-        margin-left: 10px;
-        span:first-child{
-         
 
-        }
-        span:last-child{
-            vertical-align: text-bottom;
-        }
     }
-    .meter-score, .roten-score{
-        margin-left: 10px;
-        color: white;
+
+    .userlike-bar {
         display: flex;
-        align-items: center;
-        img{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .dis-or-like {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        &>span {
+            color: white;
+        }
+
+        .dislike,
+        .dolike {
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            transition: all 500ms;
+
+            &:hover {
+                color: $Orange;
+                cursor: pointer;
+            }
+
+            span {
+                margin-right: 10px;
+            }
+
+            i {
+                font-size: 18px;
+                vertical-align: bottom;
+            }
+        }
+
+        .sepeprator {
             height: 24px;
-            width: auto;
+            width: 3px;
+            background-color: rgb(56, 56, 56);
+            margin: auto 10px;
         }
-        span{
-            font-size: 14px;
-           margin-left: 10px;
+
+        .dislike {
+            i {
+                transform: scaleX(-1);
+
+
+
+            }
+
         }
+
+        .mizan-like {
+            margin-right: 60px;
+
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: baseline;
+            white-space: nowrap;
+            row-gap: 300px;
+            color: $lightOrange;
+
+            .prantes {
+                font-size: 10px;
+                vertical-align: bottom;
+            }
+
+            i {
+                font-size: 18px;
+            }
+
+        }
+
     }
-    
- 
-}
-.userlike-bar{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-   flex-wrap: wrap;
-    .dis-or-like{
+
+    .buttens {
         display: flex;
-        flex-direction: row-reverse;
-    }
-    &>span{
-        color:white;
-    }
-    .dislike,.dolike{
-        font-size: 13px;
-        display: flex;
-        align-items: center;
-        transition: all 500ms;
-        &:hover{
-            color: $Orange;
-            cursor: pointer;
+        //flex-direction: row-reverse;
+        row-gap: 15px;
+        flex-flow: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &>span {
+            margin-right: 14px;
+            margin-top: 16px;
+
+            &>span {
+                margin-right: 8px;
+            }
         }
-        span{
-            margin-right: 10px;
-        }
-        i{
-            font-size: 18px;
-            vertical-align: bottom;
-        }
-    }
-    .sepeprator{
-        height: 24px;
-        width: 3px;
-        background-color: rgb(56, 56, 56);
-        margin: auto 10px;
     }
 
-    .dislike{
-        i{
-            transform: scaleX(-1);
-           
-        
-
-        }
-    
-    }
-    .mizan-like{
-        margin-right: 60px;
-      
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: baseline;
-        white-space: nowrap;
-        row-gap: 300px;
-        color: $lightOrange;
-        .prantes{
-            font-size: 10px;
-            vertical-align: bottom;
-        }
-        i{
-            font-size: 18px;
-        }
+    .my-btn-white {
+        @include CreateBtn($Orange, $lightText);
 
     }
 
-}
-.buttens{
-    display: flex;
-    //flex-direction: row-reverse;
-    row-gap: 15px;
-    flex-flow: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    &>span{
-        margin-right: 14px;
-        margin-top: 16px;
-        &>span{
-            margin-right: 8px;
+    .my-btn-dark {
+        @include CreateBtn($lightBlack, $lightText, 'true');
+        order: 1;
+
+        i {
+            font-size: 16px;
         }
     }
 }
-.my-btn-white{
-    @include CreateBtn($Orange, $lightText);
-  
-}
-.my-btn-dark{
-    @include CreateBtn($lightBlack, $lightText,'true');
-    order: 1;
-    i{
-        font-size: 16px;
-    }
-}
-}
 
-@mixin more-information(){
+@mixin more-information() {
     max-height: 90px;
     overflow: hidden;
-    &.active{
+
+    &.active {
         max-height: 500px;
-        .arrow-label{
+
+        .arrow-label {
             transform: rotate(180deg);
         }
     }
+
     transition: max-height;
     transition-delay: 200ms;
     transition-duration: 900ms;
-    
-  
+
+
     padding-left: 40px;
     padding-right: 40px;
     position: relative;
-.get-moreinfo{
-    color: $darkText;
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 11px;
-  
-    .arrow-label{
-        @include CreateArrowBtn(-90deg);
-        transition: all 1.2s;
+
+    .get-moreinfo {
+        color: $darkText;
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+
+        .arrow-label {
+            @include CreateArrowBtn(-90deg);
+            transition: all 1.2s;
+        }
+
     }
-  
-}
-p{
-    direction: rtl;
-    color: $lightText;
-    i{
-        color:$lightOrange;
-        font-weight: 100;
-        font-size: 18px;
-        margin-right: 5px;
-        margin-left: 10px;
+
+    p {
+        direction: rtl;
+        color: $lightText;
+
+        i {
+            color: $lightOrange;
+            font-weight: 100;
+            font-size: 18px;
+            margin-right: 5px;
+            margin-left: 10px;
+        }
     }
 }
-}
 
 
 
-@mixin CreateBtn($bgColor,$Color,$lighter:'false'){
+@mixin CreateBtn($bgColor, $Color, $lighter:'false') {
     display: flex;
-   flex-direction: row;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
     white-space: nowrap;
     background-color: $bgColor;
     color: $Color;
-    padding:13px 20px;
+    padding: 13px 20px;
     border-radius: 14px;
     font-size: 12px;
     font-weight: 500;
     transition: background-color;
     transition-delay: 100ms;
     transition-duration: 300ms;
-    &:hover{
-        @if($lighter=='true'){
+
+    &:hover {
+        @if($lighter=='true') {
             background-color: lighten($color: $bgColor, $amount: 10%);
             cursor: pointer;
         }
-        @else{
+
+        @else {
             background-color: darken($color: $bgColor, $amount: 10%);
             cursor: pointer;
         }
-      
+
     }
-   
+
 }
 
-@mixin CreateArrowBtn($degree:0deg){
-display: flex;
-align-items: center;
-justify-content: center;
+@mixin CreateArrowBtn($degree:0deg) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 24px;
     height: 24px;
     padding: 15px;
@@ -1133,16 +1264,18 @@ justify-content: center;
     border-radius: 50%;
     margin-right: 10px;
     margin-left: 10px;
-i{
-   transform: rotateZ($degree);
-}
+
+    i {
+        transform: rotateZ($degree);
+    }
 
 }
-@mixin CreateStarsList(){
+
+@mixin CreateStarsList() {
     color: $lightText;
     //width: 90%;
-    $WIDTH:90;
-    $HEIGHT:90;
+    $WIDTH: 90;
+    $HEIGHT: 90;
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-start;
@@ -1153,7 +1286,8 @@ i{
     margin-top: 26px;
     padding-left: 10px;
     padding-right: 10px;
-    .star-box{
+
+    .star-box {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1162,156 +1296,177 @@ i{
         width: calc($WIDTH + 20) +px;
         height: calc($HEIGHT + 30)px;
         overflow: hidden;
-        p{
+
+        p {
             transition: color;
             transition-delay: 80ms;
             transition-duration: 300ms;
         }
-        &:hover{
+
+        &:hover {
             cursor: pointer;
-            p{
+
+            p {
                 color: $Orange;
             }
         }
     }
-    .star-name{
+
+    .star-name {
         overflow: hidden;
         text-overflow: ellipsis;
         direction: ltr;
         white-space: nowrap;
-         width: 100%;
-        text-align: left ;
+        width: 100%;
+        text-align: left;
         margin: 0;
         margin-top: 10px;
-     
+
     }
-    .star-pic{
-    @include CreateStarInfo($WIDTH,$HEIGHT);
-}
+
+    .star-pic {
+        @include CreateStarInfo($WIDTH, $HEIGHT);
+    }
 
 }
-@mixin CreateStarInfo($xSize,$ySize){
-width:$xSize+px;
-height: $ySize+px;
-border-radius: 50%;
-display: flex;
-justify-content: center;
-img{
-    width: 90%;
-    height: 90%;
+
+@mixin CreateStarInfo($xSize, $ySize) {
+    width: $xSize+px;
+    height: $ySize+px;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+
+    img {
+        width: 90%;
+        height: 90%;
+        border-radius: 50%;
+
+    }
 
 }
 
-}
-@mixin CreateDownloadBox(){
+@mixin CreateDownloadBox() {
 
     display: flex;
     flex-direction: column;
     width: 90%;
 
- 
+
     color: white;
-    background-color:$lightBlack;
-    margin:80px auto 40px;
+    background-color: $lightBlack;
+    margin: 80px auto 40px;
     border-radius: 30px;
     direction: rtl;
     overflow: hidden;
-    #download-header{
+
+    #download-header {
         width: 100%;
         padding-right: 20px;
         padding-top: 20px;
         padding-bottom: 20px;
         margin: auto;
-       // margin-top: 20px;
+        // margin-top: 20px;
         background-color: $color_downloadHeader;
-        
-        .download-header-icon{
+
+        .download-header-icon {
             color: $darkText;
             margin-left: 8px;
         }
-        .download-header-text{
+
+        .download-header-text {
             font-size: 12px;
         }
     }
-    .download-season{
-   
+
+    .download-season {
+
         background-color: transparent;
         padding-right: 20px;
         padding-left: 20px;
         padding-bottom: 20px;
-        max-height:78px;
+        max-height: 78px;
         transition: max-height;
         transition-delay: 50ms;
         transition-duration: 900ms;
-        &.active{
-            max-height:2000px;
-            .season-links{
+
+        &.active {
+            max-height: 2000px;
+
+            .season-links {
                 max-height: 2000px;
                 padding: 20px;
             }
         }
-        //Change After Test to 70px
-       // height: 370px;
 
-        .season-header{
+        //Change After Test to 70px
+        // height: 370px;
+
+        .season-header {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
             width: 100%;
             height: 70px;
-            .season-sing{
+
+            .season-sing {
                 font-size: 20px;
                 color: $Orange;
                 margin-left: 8px;
             }
-            .season-name{
+
+            .season-name {
                 font-size: 15px;
             }
-            .season-state{
+
+            .season-state {
                 padding: 14px 20px;
                 background-color: $darkColor;
                 border-radius: 20px;
                 margin-right: 20px;
                 font-size: 12px;
             }
-            .season-trigger{
+
+            .season-trigger {
                 margin-left: 20px;
                 @include CreateArrowBtn(180deg);
-              
-            }
-        }
-        .season-links{
-            display: flex;
-            flex-direction:column;
-            width: 100%;
-           // height: 170px;
-           max-height: 0px;
-            background-color: $darkColor;
-            border-radius: 25px;
-         
-            margin: auto;
-          box-sizing: border-box;
-            transition: all 900ms;
-            .one-season-links-header{
-                width: 100%;
-               display: flex;
-               flex-direction: row;
-               justify-content: space-between;
-               align-items: center;
-               border-radius: 25px;
-               padding: 20px;
-               padding-right: 0px;
-               padding-left: 0px;
-               margin: auto;
-              
 
             }
-            .one-season-links{
+        }
+
+        .season-links {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            // height: 170px;
+            max-height: 0px;
+            background-color: $darkColor;
+            border-radius: 25px;
+
+            margin: auto;
+            box-sizing: border-box;
+            transition: all 900ms;
+
+            .one-season-links-header {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                border-radius: 25px;
+                padding: 20px;
+                padding-right: 0px;
+                padding-left: 0px;
+                margin: auto;
+
+
+            }
+
+            .one-season-links {
                 background-color: $color_downloadHeader;
                 width: 100%;
-                 max-height: 80px;
+                max-height: 80px;
                 border-radius: 20px;
                 display: flex;
                 flex-direction: column;
@@ -1319,22 +1474,24 @@ img{
                 align-items: center;
                 margin-bottom: 20px;
                 overflow: hidden;
-               // padding-right: 20px;
-               // padding-left: 20px;
+                // padding-right: 20px;
+                // padding-left: 20px;
                 //padding-bottom: 20px;
                 transition: max-height;
                 transition-delay: 0s;
                 transition-timing-function: linear;
                 transition-duration: 1s;
-            
-                &.active{
-                   max-height: 1000px;
-                   .one-season-link-box{
-                    transition: all 100ms;
-                     background-color: $lightBlack;
-                   }
+
+                &.active {
+                    max-height: 1000px;
+
+                    .one-season-link-box {
+                        transition: all 100ms;
+                        background-color: $lightBlack;
+                    }
                 }
-                .one-season-texts{
+
+                .one-season-texts {
 
                     display: flex;
                     flex-direction: row;
@@ -1342,39 +1499,46 @@ img{
                     justify-self: flex-start;
                     margin-left: 0px;
                     text-align: center;
-                    span{
+
+                    span {
                         margin-left: 15px;
                     }
 
                 }
-                .one-season-left{
+
+                .one-season-left {
                     display: flex;
                     align-items: center;
-                    .subtite-type{
+
+                    .subtite-type {
                         padding: 6px 15px;
                         background-color: lighten($color: $lightBlack, $amount: 5%);
                         border-radius: 12px;
                         border: 1px solid $darkText;
                         margin-left: 20px;
                     }
-                    .season-trigger{
+
+                    .season-trigger {
                         @include CreateArrowBtn(0deg);
                         margin-right: 0px;
                     }
                 }
-                .link-copyer{
+
+                .link-copyer {
                     width: 100%;
                     background-color: $lightBlack;
                     border-bottom-left-radius: 25px;
                     border-bottom-right-radius: 25px;
                     padding-left: 5px;
                     padding-right: 5px;
-                    hr{
-                        
-                    
+
+                    hr {
+
+
                         border: 1px solid black;
                     }
-                    .link-copyer-btn{
+
+                    .link-copyer-btn {
                         display: inline-block;
                         margin: 10px;
                         border-radius: 18px;
@@ -1382,11 +1546,13 @@ img{
                         padding: 16px 24px;
                         font-size: 13px;
                         margin-bottom: 20px;
-                        i{
+
+                        i {
                             margin-left: 9px;
                             font-size: 20px;
                         }
-                        &:hover{
+
+                        &:hover {
                             border-color: $Orange;
                             cursor: pointer;
                         }
@@ -1395,19 +1561,20 @@ img{
             }
         }
 
-        .one-season-link-box{
-          //  background-color: $lightBlack;
-          background-color:$color_downloadHeader;
-          transition: all 2.5s;
-           padding: 20px;
+        .one-season-link-box {
+            //  background-color: $lightBlack;
+            background-color: $color_downloadHeader;
+            transition: all 2.5s;
+            padding: 20px;
             width: 100%;
             display: grid;
-            grid-template-columns: repeat(6,1fr);
+            grid-template-columns: repeat(6, 1fr);
             row-gap: 20px;
             column-gap: 20px;
-          //  border-bottom-left-radius: 25px;
-           // border-bottom-right-radius: 25px;
-            .link-in-link-box{
+
+            //  border-bottom-left-radius: 25px;
+            // border-bottom-right-radius: 25px;
+            .link-in-link-box {
                 width: auto;
                 padding-top: 12px;
                 padding-bottom: 12px;
@@ -1417,172 +1584,190 @@ img{
                 color: $lightText;
                 text-decoration: none;
                 font-size: 13px;
-                &:hover{
+
+                &:hover {
                     background-color: lighten($color:$darkColor, $amount: 10);
                     color: darken($color:$lightText, $amount: 20);
                 }
-                
+
             }
         }
     }
 }
 
 
-@mixin CreateUserList(){
-  width: 100%; 
-  height: 100%;
-  background-color: $lightBlack;
-  border-radius: 20px;
-    .img-suggest-list{
+@mixin CreateUserList() {
+    width: 100%;
+    height: 100%;
+    background-color: $lightBlack;
+    border-radius: 20px;
+
+    .img-suggest-list {
         width: 100%;
-       padding: 10px;
-       padding-top: 5px;
+        padding: 10px;
+        padding-top: 5px;
         display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         column-gap: 10px;
         row-gap: 5px;
-      
-        img{
-             width: 100%;
+
+        img {
+            width: 100%;
             height: 110px;
             object-fit: cover;
             object-position: center;
             border-radius: 20px;
         }
-       .suggest-more 
-       {
-        &:hover .suggest-more-counter{
-          border-color: $darkOrange;
-          color: $Orange;
-        }
-        position: relative;
-        img{
-            filter: blur(3px) brightness(50%);
-            //opacity: 0.7;
-            overflow: hidden;
-       }
-       .suggest-more-counter{
-        transition: all 500ms;
-        padding: 10px 10px;
-        background-color: transparent;
-        border: 1px solid $darkText;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        border-radius: 10px;
-        color: $lightText;
-        transform: translate3d(-50%,-50%,0px);
-        white-space: nowrap;
-        sub{
-            vertical-align: bottom;
-        }
-       }
-        }
-       
 
-    }
- .suggest-list-name{
-    width: 100%;
-    font-size: 13px;
-    font-weight: 700;
-    text-align: center;
-  a{
-    color:$lightText;
-    transition: all 500ms;
-    text-decoration: none;
-    &:hover{
-        color:$Orange;
-    }
-  }
-
- }
- .suggest-creator-info{
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-bottom: 10px;
-    margin-top: 10px;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    color: $darkText;
-    font-size: 14px;
-   
-    .suggest-div-user{
-        display: flex;
-        align-items: center;
-        .suggest-user-name{
-            color: $lightText   ;
-            font-size: 15px;
-            text-decoration: none;
-            transition: all 500ms;
-            &:hover{
-                color:$Orange;
+        .suggest-more {
+            &:hover .suggest-more-counter {
+                border-color: $darkOrange;
+                color: $Orange;
             }
 
+            position: relative;
+
+            img {
+                filter: blur(3px) brightness(50%);
+                //opacity: 0.7;
+                overflow: hidden;
+            }
+
+            .suggest-more-counter {
+                transition: all 500ms;
+                padding: 10px 10px;
+                background-color: transparent;
+                border: 1px solid $darkText;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                border-radius: 10px;
+                color: $lightText;
+                transform: translate3d(-50%, -50%, 0px);
+                white-space: nowrap;
+
+                sub {
+                    vertical-align: bottom;
+                }
+            }
         }
+
+
     }
 
- }
- hr{
-    width:80%;
-   border-color:$darkColor;
-  
-}
+    .suggest-list-name {
+        width: 100%;
+        font-size: 13px;
+        font-weight: 700;
+        text-align: center;
+
+        a {
+            color: $lightText;
+            transition: all 500ms;
+            text-decoration: none;
+
+            &:hover {
+                color: $Orange;
+            }
+        }
+
+    }
+
+    .suggest-creator-info {
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-bottom: 10px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $darkText;
+        font-size: 14px;
+
+        .suggest-div-user {
+            display: flex;
+            align-items: center;
+
+            .suggest-user-name {
+                color: $lightText;
+                font-size: 15px;
+                text-decoration: none;
+                transition: all 500ms;
+
+                &:hover {
+                    color: $Orange;
+                }
+
+            }
+        }
+
+    }
+
+    hr {
+        width: 80%;
+        border-color: $darkColor;
+
+    }
 }
 
-@mixin CreateSuggestBox(){
+@mixin CreateSuggestBox() {
     padding-right: 50px;
     padding-left: 50px;
     direction: rtl;
     width: 100%;
-   
-    &>p{
+
+    &>p {
         width: 100%;
         color: $darkText;
         font-size: 13px;
     }
-    .suggest-lists{
-       
+
+    .suggest-lists {
+
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(4,1fr);
-        
+        grid-template-columns: repeat(4, 1fr);
+
         column-gap: 14px;
 
     }
 
 }
 
-@mixin Suggest-horizontal-list(){
+@mixin Suggest-horizontal-list() {
     padding: 25px;
-    .horizontal-list-header-text{
+
+    .horizontal-list-header-text {
         font-size: 13px;
         color: $darkText;
     }
 }
 
-@mixin TagsBox(){
-  padding-right: 50px;
-  padding-left: 50px;
+@mixin TagsBox() {
+    padding-right: 50px;
+    padding-left: 50px;
     color: $darkText;
     direction: rtl;
     width: 100%;
-  
 
-    p:first-child{
+
+    p:first-child {
         font-size: 14px;
         margin-bottom: 0px;
     }
-    p:last-child{
+
+    p:last-child {
         margin-top: 0px;
     }
-    a{
+
+    a {
         font-size: 13px;
         text-decoration: none;
         color: $darkText;
         transition: all 500ms;
-        &:hover{
+
+        &:hover {
             color: $Orange;
         }
     }
@@ -1590,157 +1775,181 @@ img{
 
 
 
-@mixin Comment-Conditions(){
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-
-p{
-    color: $darkText;
-    text-align: center;
-    font-size: 14px;
-}
-div{
+@mixin Comment-Conditions() {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    justify-self: center;
-    .login-btn,.signup-btn{
-        padding: 10px 10px;
-        color: $lightText;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    p {
+        color: $darkText;
         text-align: center;
-        border-radius: 14px;
-        text-decoration: none;
-        font-size: 13px;
-        transition: all 500ms;
-
-    }
-    .login-btn{
-        background-color: $darkColor;
-        width: 60%;
-        &:hover{
-            background-color:lighten($color:  $darkColor, $amount: 4);
-        }
+        font-size: 14px;
     }
 
-    .signup-btn  {
-        width: 30%;
-        background-color: $Orange;
-        &:hover{
-            background-color: darken($color: $Orange, $amount: 10);
+    div {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        justify-self: center;
+
+        .login-btn,
+        .signup-btn {
+            padding: 10px 10px;
+            color: $lightText;
+            text-align: center;
+            border-radius: 14px;
+            text-decoration: none;
+            font-size: 13px;
+            transition: all 500ms;
+
         }
-      
+
+        .login-btn {
+            background-color: $darkColor;
+            width: 60%;
+
+            &:hover {
+                background-color: lighten($color: $darkColor, $amount: 4);
+            }
+        }
+
+        .signup-btn {
+            width: 30%;
+            background-color: $Orange;
+
+            &:hover {
+                background-color: darken($color: $Orange, $amount: 10);
+            }
+
+        }
     }
 }
-}
-@mixin CommentAlone(){
+
+@mixin CommentAlone() {
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
     padding: 20px;
     position: relative;
-    .comment-pic img{
+
+    .comment-pic img {
         width: 50px;
         height: 50px;
         object-fit: cover;
         object-position: center;
         border-radius: 20px;
     }
-    .comment-info{
+
+    .comment-info {
         margin-right: 25px;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        span{
+
+        span {
             color: $lightText;
             font-weight: 700;
             letter-spacing: 2px;
         }
-        p{
-            color:$darkText;
+
+        p {
+            color: $darkText;
             text-align: right;
             margin-top: 4px;
             font-size: 14px;
-            &.spoile{
+
+            &.spoile {
                 filter: blur(5px);
             }
         }
-        button{
+
+        button {
             background-color: transparent;
             border: 1px solid $Orange;
             border-radius: 14px;
-            padding : 6px 26px;
+            padding: 6px 26px;
             color: $lightText;
             font-size: 12px;
             transition: background-color 500ms;
-            &:hover{
+
+            &:hover {
                 cursor: pointer;
                 background-color: $Orange;
             }
         }
-     }
-     .comment-likes{
+    }
+
+    .comment-likes {
         justify-self: flex-end;
         align-self: center;
         margin-right: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
-        .comment-time{
+
+        .comment-time {
             color: $lightText;
             font-size: 13px;
             margin-top: 4px;
             direction: rtl;
             font-weight: 200;
         }
-        .comment-like-box{
+
+        .comment-like-box {
             display: flex;
             flex-direction: row;
             align-items: center;
             background-color: $darkColor;
-             padding: 14px 30px;
-             border-radius: 15px;
-             color: $lightText;
-             margin-right: 20px;
-             min-width: 97px;
+            padding: 14px 30px;
+            border-radius: 15px;
+            color: $lightText;
+            margin-right: 20px;
+            min-width: 97px;
 
         }
-        .like-dislike{
-            .like-seperator{
+
+        .like-dislike {
+            .like-seperator {
                 display: inline-block;
                 background-color: $like-dislike-line;
-            width: 3px;
-            height: 20px;
-            border-radius: 20px;
-            transform: translateY(20%);
+                width: 3px;
+                height: 20px;
+                border-radius: 20px;
+                transform: translateY(20%);
             }
-            .dislike-btn,.like-btn{
+
+            .dislike-btn,
+            .like-btn {
                 transition: color 500ms;
-                &:hover{
+
+                &:hover {
                     cursor: pointer;
                     color: $Orange;
                 }
             }
         }
-        .dislike-btn  i{
-            transform: scale3d(-1,-1,1);
-          
+
+        .dislike-btn i {
+            transform: scale3d(-1, -1, 1);
+
         }
 
-     }
-  
+    }
+
 }
-@mixin Comment-Area(){
-    
+
+@mixin Comment-Area() {
+
 
     border-radius: 30px;
     background-color: $lightBlack;
     margin-right: 50px;
     margin-left: 50px;
     overflow: hidden;
-  margin-bottom: 50px;
-    #comment-header{
+    margin-bottom: 50px;
+
+    #comment-header {
 
         width: 100%;
         display: flex;
@@ -1749,39 +1958,46 @@ div{
         background-color: $color_commentsHeader;
         align-items: center;
         padding-bottom: 20px;
-        #comments-count{
+
+        #comments-count {
             align-self: flex-start;
             margin-left: 30px;
             margin-top: 10px;
-           
-            span:first-child{
+
+            span:first-child {
                 font-size: 26px;
                 color: $lightText;
             }
-            span:last-child{
+
+            span:last-child {
                 font-size: 11px;
                 vertical-align: super;
                 color: $darkText;
             }
         }
-        .comments-logo{
+
+        .comments-logo {
             font-size: 3rem;
             color: $Orange;
             margin-right: 30px;
         }
     }
-    .comment-conditions{
-     @include   Comment-Conditions();
+
+    .comment-conditions {
+        @include Comment-Conditions();
     }
-    .comment-body{
+
+    .comment-body {
         @include CommentAlone();
     }
-    #comments-body{
+
+    #comments-body {
         display: flex;
         flex-direction: column;
         padding-bottom: 20px;
     }
-    .more-comment{
+
+    .more-comment {
         padding: 12px 26px;
         border-radius: 13px;
         background-color: $darkColor;
@@ -1790,63 +2006,74 @@ div{
         color: $lightText;
         font-size: 12px;
         transition: all 500ms;
-        &:hover{
+
+        &:hover {
             cursor: pointer;
             background-color: lighten($color: $darkColor, $amount: 10%);
-                
+
         }
-     }
+    }
 
 }
 
-.bookmark{
-transition: all 500ms;
-&:hover,&.active{
-    color: $darkGreen;
-   
-}
-&:hover{cursor: pointer;}
-
-}
-.bell{
+.bookmark {
     transition: all 500ms;
-&:hover{
-    color: $Orange;
-    cursor: pointer;
+
+    &:hover,
+    &.active {
+        color: $darkGreen;
+
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
 }
+
+.bell {
+    transition: all 500ms;
+
+    &:hover {
+        color: $Orange;
+        cursor: pointer;
+    }
 }
-#login-btn{
+
+#login-btn {
     padding: 0px;
-    &>a{
+
+    &>a {
         padding: 14px 10px;
     }
- 
-    .unvisable-div{
-        display: none;
-      .login-popup{
-        display: none;
-        opacity: 0;
-        transition: all 5s;
 
-      }
+    .unvisable-div {
+        display: none;
+
+        .login-popup {
+            display: none;
+            opacity: 0;
+            transition: all 5s;
+
+        }
     }
-    
-    &:hover{
+
+    &:hover {
         position: relative;
-     
-        .unvisable-div{
+
+        .unvisable-div {
             position: absolute;
             padding-top: 23px;
-             display: block;
-           margin-top: 43px;
-             background-color: transparent;
+            display: block;
+            margin-top: 43px;
+            background-color: transparent;
             top: 0px;
             left: 0px;
             z-index: 10;
-           
-            .login-popup{
+
+            .login-popup {
                 position: relative;
-                background: transparent ;
+                background: transparent;
                 opacity: 1;
                 width: 260px;
                 display: flex;
@@ -1857,51 +2084,63 @@ transition: all 500ms;
                 overflow: hidden;
                 padding-top: 20px;
                 padding-bottom: 20px;
-                *{
+
+                * {
                     z-index: 13;
                 }
-                .btn-enter{
+
+                .btn-enter {
                     padding: 10px 20px;
                     background-color: $lightBlack;
                     border-radius: 12px;
                     margin-bottom: 20px;
                 }
-                .no-sigup{
+
+                .no-sigup {
                     width: 100%;
                     text-align: center;
-                    a{
+
+                    a {
                         color: $Orange;
                     }
                 }
-                hr{
+
+                hr {
                     border: 1px solid $darkText;
                     width: 90%;
                 }
-                .vip-text{
-                    i{
+
+                .vip-text {
+                    i {
                         margin-left: 5px;
                     }
+
                     transition: all 500ms;
                     text-align: center;
-                    &:hover{
+
+                    &:hover {
                         color: $Orange;
                     }
                 }
-                .blur-bg,.black-bg{
+
+                .blur-bg,
+                .black-bg {
                     position: absolute;
                     left: 0px;
                     top: 0px;
                 }
-                .blur-bg{
+
+                .blur-bg {
                     display: flex;
                     width: 100%;
                     height: 100%;
                     background: transparent;
                     backdrop-filter: blur(3px);
-                 
+
                     z-index: 11;
                 }
-                .black-bg{
+
+                .black-bg {
                     display: flex;
                     width: 100%;
                     height: 100%;
@@ -1909,57 +2148,61 @@ transition: all 500ms;
                     opacity: 0.7;
                     z-index: 12;
                 }
-              
+
             }
 
         }
-        .arrow-bg{
+
+        .arrow-bg {
             border: 10px solid transparent;
             border-bottom: 10px solid rgba($color: $darkColor, $alpha: 0.7);
             position: absolute;
             width: 10px;
             height: 10px;
             left: 20px;
-            top:47px;
+            top: 47px;
             z-index: 15;
-            
+
         }
 
     }
 }
-.catalogs-obj{
+
+.catalogs-obj {
     padding: 0px;
-    &>a{
+
+    &>a {
         padding: 14px 10px;
     }
-    
-    .unvisable-div{
+
+    .unvisable-div {
         border: none !important;
         display: none;
-      .login-popup{
-        display: none;
-        opacity: 0;
-        transition: all 5s;
 
-      }
+        .login-popup {
+            display: none;
+            opacity: 0;
+            transition: all 5s;
+
+        }
     }
-    
-    &:hover{
+
+    &:hover {
         position: relative;
-     
-        .unvisable-div{
+
+        .unvisable-div {
             position: absolute;
             padding-top: 23px;
-             display: block;
-           margin-top: 43px;
-             background-color: transparent;
+            display: block;
+            margin-top: 43px;
+            background-color: transparent;
             top: 0px;
             right: 0px;
             z-index: 10;
-           
-            .login-popup{
+
+            .login-popup {
                 position: relative;
-                background: transparent ;
+                background: transparent;
                 opacity: 1;
                 width: 1000px;
                 display: flex;
@@ -1970,42 +2213,53 @@ transition: all 500ms;
                 overflow: hidden;
                 padding-top: 20px;
                 padding-bottom: 20px;
-                *{
+
+                * {
                     z-index: 13;
                 }
-                .btn-enter{
+
+                .btn-enter {
                     padding: 10px 20px;
                     background-color: $lightBlack;
                     border-radius: 12px;
                     margin-bottom: 20px;
                 }
-                .no-sigup{
+
+                .no-sigup {
                     width: 100%;
                     text-align: center;
-                    a{
+
+                    a {
                         color: $Orange;
                     }
                 }
-                hr{
+
+                hr {
                     border: 1px solid $darkText;
                     width: 90%;
                 }
-                .vip-text{
-                    i{
+
+                .vip-text {
+                    i {
                         margin-left: 5px;
                     }
+
                     transition: all 500ms;
                     text-align: center;
-                    &:hover{
+
+                    &:hover {
                         color: $Orange;
                     }
                 }
-                .blur-bg,.black-bg{
+
+                .blur-bg,
+                .black-bg {
                     position: absolute;
                     left: 0px;
                     top: 0px;
                 }
-                .blur-bg{
+
+                .blur-bg {
                     display: flex;
                     width: 100%;
                     height: 100%;
@@ -2014,7 +2268,8 @@ transition: all 500ms;
                     border: none;
                     z-index: 11;
                 }
-                .black-bg{
+
+                .black-bg {
                     display: flex;
                     width: 100%;
                     height: 100%;
@@ -2023,27 +2278,28 @@ transition: all 500ms;
                     z-index: 12;
                     border: none;
                 }
-              
+
             }
 
         }
-        .arrow-bg{
+
+        .arrow-bg {
             border: 10px solid transparent;
             border-bottom: 10px solid rgba($color: $darkColor, $alpha: 0.7);
             position: absolute;
             width: 10px;
             height: 10px;
             left: 20px;
-            top:47px;
+            top: 47px;
             z-index: 15;
-            
+
         }
 
     }
 
 }
 
-.visable-list{
+.visable-list {
     display: flex;
     flex-direction: row-reverse;
     width: 100%;
@@ -2052,7 +2308,8 @@ transition: all 500ms;
     border: none;
     padding-left: 30px;
     padding-right: 30px;
-    .list-subjects{
+
+    .list-subjects {
         display: flex;
         width: 20%;
         direction: rtl;
@@ -2061,7 +2318,8 @@ transition: all 500ms;
         font-size: 17px;
         padding-left: 30px;
         border-left: 1px solid $darkText;
-        .list-subject{
+
+        .list-subject {
             padding: 18px 3.5rem;
             border-radius: 16px;
             font-size: 14px;
@@ -2070,114 +2328,202 @@ transition: all 500ms;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            
-            &>i{
+
+            &>i {
                 font-size: 22px;
-                
+
                 text-align: right;
-                &.thisRound{
-                    padding:3px 5px;
+
+                &.thisRound {
+                    padding: 3px 5px;
                     font-size: 16px;
                     border: 2px solid white;
                     border-radius: 10px;
                 }
             }
-            &>span{
+
+            &>span {
                 margin-right: 10px;
             }
-            &.selected{
+
+            &.selected {
                 background-color: $darkColor;
             }
         }
     }
-    .list-of-subjects{
+
+    .list-of-subjects {
         width: 80%;
-        
+
         direction: rtl;
         padding-right: 30px;
-        &>div{
+
+        &>div {
             display: none;
-            &.visable{
+
+            &.visable {
                 display: grid;
             }
         }
-        .grid-5col{
-            grid-template-columns: repeat(5,1fr);
+
+        .grid-5col {
+            grid-template-columns: repeat(5, 1fr);
         }
-        .grid-3col{
-            grid-template-columns: repeat(3,1fr);
+
+        .grid-3col {
+            grid-template-columns: repeat(3, 1fr);
         }
-        .grid-2col-1col{
+
+        .grid-2col-1col {
             grid-template-columns: 2fr 1fr;
         }
-        .grid-2col{
+
+        .grid-2col {
             display: grid;
             grid-template-columns: 1fr 1fr;
             width: 100%;
             text-align: center;
             padding-right: 0px;
             text-align: right;
-            li{
+
+            li {
                 margin-top: 8px;
                 margin-bottom: 8px;
                 display: block;
             }
         }
-        .flex-list-col{
+
+        .flex-list-col {
             display: flex;
             flex-direction: column;
             direction: rtl;
             align-items: center;
         }
-        .list-header{
+
+        .list-header {
             width: 100%;
             font-size: 15px;
             text-align: right;
             padding: 2px;
-            border-right:2px solid $Orange;
+            border-right: 2px solid $Orange;
         }
-        .no-border-right.item-normal{
+
+        .no-border-right.item-normal {
             border-right: none;
         }
-        .item-normal{
+
+        .item-normal {
             font-size: 15px;
             text-align: center;
             padding: 2px;
-            border-right:2px solid $Orange;
+            border-right: 2px solid $Orange;
             margin: 20px 10px;
             display: flex;
             align-items: center;
-            &.low-margin{
+
+            &.low-margin {
                 margin: 8px 10px;
                 width: 100%;
                 text-align: right;
             }
-            .item-link{
+
+            .item-link {
                 text-decoration: none;
                 color: $lightText;
                 font-size: 14px;
                 padding-right: 10px;
-                .movie-count{
+
+                .movie-count {
                     font-size: 12px;
                     color: darken($color: $lightText, $amount: 20);
                     transition: all 500ms;
                     margin-right: 2px;
                 }
-                &:hover{
-                   margin-right: 10px;
-                   color: $Orange;
-                   .movie-count{  color: darken($color: $Orange, $amount: 10);}
+
+                &:hover {
+                    margin-right: 10px;
+                    color: $Orange;
+
+                    .movie-count {
+                        color: darken($color: $Orange, $amount: 10);
+                    }
                 }
-                &.dont-move{
+
+                &.dont-move {
                     margin-right: 0px
                 }
             }
-            .item-count{
+
+            .item-count {
                 font-size: 13px;
                 color: $darkText;
                 margin-right: 5px;
             }
-           
+
         }
     }
+}
+
+#easy-search {
+    position: relative;
+}
+
+#easy-search-result {
+    display: none;
+    // display: flex;
+    width: 500px;
+    height: 300px;
+    top: 60px;
+    position: absolute;
+    flex-direction: column;
+    z-index: 20;
+
+    .results-holder {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        padding: 20px;
+        justify-content: center;
+        align-items: end;
+    }
+    #easy-search-text-result{
+        z-index: 14;
+        padding: 5px;
+        text-align: right;
+        margin-top: 20px;
+        margin-right: 10px;
+    }
+    .easy-search-result-simple {
+        z-index: 14;
+        width: 25%;
+        height: fit-content;
+        margin: auto;
+    }
+
+    .blur-bg,
+    .black-bg {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+
+    .blur-bg {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        backdrop-filter: blur(3px);
+
+        z-index: 11;
+    }
+
+    .black-bg {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background-color: $darkColor;
+        opacity: 0.7;
+        z-index: 12;
+    }
+
 }

@@ -747,4 +747,110 @@
       ]
     }
   ]
+  ,
+  
+    "allPosts":[
+          {
+            "postID": 1,
+            "postName": "The Peripheral 2021",
+            "postBgImage": "./images/poster/the.peripheral.jpg",
+            "langType": "sub",
+            "postLink": "./page.html?The Peripheral 2021",
+            "postLike": "56",
+            "postScore": "7.3"
+          },
+          {
+            "postID": 2,
+            "postName": "Lockwood & Co 2023",
+            "postBgImage": "./images/poster/Lockwood-Co (2023)-210x310.webp",
+            "langType": "dubbed",
+            "postLink": "./page.html?Lockwood & Co 2023",
+            "postLike": "63",
+            "postScore": "6.5"
+          },
+          {
+            "postID": 3,
+            "postName": "Poker Face (2023)",
+            "postBgImage": "./images/poster/Poker Face (2023)_SX500.jpg",
+            "langType": "sub",
+            "postLink": "./page.html?Poker Face (2023)",
+            "postLike": "87",
+            "postScore": "8.2"
+          },
+          {
+            "postID": 4,
+            "postName": "The Last of Us (2023)",
+            "postBgImage": "./images/poster/The Last of Us (2023)_SX500.jpg",
+            "langType": "dubbed",
+            "postLink": "./page.html?The Last of Us (2023)",
+            "postLike": "90",
+            "postScore": "9.3"
+          },
+          {
+            "postID": 5,
+            "postName": "Treason (2022)",
+            "postBgImage": "./images/poster/Treason (2022)V1_SX500.jpg",
+            "langType": "sub",
+            "postLink": "./page.html?Treason (2022)",
+            "postLike": "86",
+            "postScore": "6.3"
+          },
+          {
+            "postID": 6,
+            "postName": "The Witcher: Blood Origin (2022)",
+            "postBgImage": "./images/poster/The Witcher-Blood Origin (2022)_SX500.jpg",
+            "langType": "dubbed",
+            "postLink": "./page.html?The Witcher: Blood Origin (2022)",
+            "postLike": "78",
+            "postScore": "8.4"
+          },
+          {
+            "postID": 7,
+            "postName": "Wednesday (2022)",
+            "postBgImage": "./images/poster/Wednesday (2022)V1_SX500.jpg",
+            "langType": "dubbed",
+            "postLink": "./page.html?Wednesday (2022)",
+            "postLike": "56",
+            "postScore": "8.1"
+          }
+      ,      {
+            "postID": 8,
+            "postName": "Obi-Wan Kenobi (2022)",
+            "postBgImage": "./images/poster/Obi-Wan Kenobi (2022).jpg",
+            "langType": "sub",
+            "postLink": "./page.html?Obi-Wan Kenobi (2022)",
+            "postLike": "76",
+            "postScore": "5.3"
+          },
+          {
+            "postID": 9,
+            "postName": "Andor (2022)",
+            "postBgImage": "./images/poster/Andor (2022)X500.jpg",
+            "langType": "sub",
+            "postLink": "./page.html?Andor (2022)",
+            "postLike": "86",
+            "postScore": "6.3"
+          },
+          {
+            "postID": 10,
+            "postName": "Cars on the Road (2022)",
+            "postBgImage": "./images/poster/Cars on the Road (2022)_SX500.jpg",
+            "langType": "sub",
+            "postLink": "./page.html?Cars on the Road (2022)",
+            "postLike": "89",
+            "postScore": "7.7"
+          },
+          {
+            "postID": 11,
+            "postName": "The Lord of the Rings: The Rings of Power (2022)",
+            "postBgImage": "./images/poster/The Lord of the Rings The Rings of Power (2022).jpg",
+            "langType": "sub",
+            "postLink": "./page.html?The Lord of the Rings: The Rings of Power (2022)",
+            "postLike": "97",
+            "postScore": "7.3"
+          }
+        
+        
+    ]
+  
 }

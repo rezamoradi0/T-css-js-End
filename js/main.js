@@ -157,7 +157,7 @@ function CategoryLists() {
 	
  let theListSubject=  document.getElementById("listbox-" + i.toString());
  let theListItems=document.getElementById("listitem-" + i.toString());
- console.log(theListSubject);
+// console.log(theListSubject);
  theListSubject.addEventListener("mouseenter",()=>{
   for (let j = 1; j <= listboxCount; j++) {
     let allListSubject=  document.getElementById("listbox-" + j.toString());
@@ -173,8 +173,25 @@ function CategoryLists() {
 
   }
 }
+function easySearching(){
+  let searchBtn=document.getElementById("easy-search-btn");
+  let searchInput=document.getElementById("easy-search-input");
+  searchBtn.addEventListener("click",()=>{
+   let text= searchInput.value;
+   EasySearching(text);
+  });
+}
+var serachResShowing=false;
+document.body.addEventListener("click",()=>{
+  let searchRes=document.getElementById("easy-search-result");
+  if(searchRes.style.display!="none"&&serachResShowing){
+    searchRes.style.display="none";
+    serachResShowing=false;
+  }
+})
 // scrollTest();
 activtion();
 toggleClick();
 searchTypeClick();
 CategoryLists();
+easySearching();

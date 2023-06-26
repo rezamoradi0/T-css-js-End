@@ -166,7 +166,8 @@
 #login-btn:hover .unvisable-div .login-popup .vip-text:hover {
   color: #e88103;
 }
-#login-btn:hover .unvisable-div .login-popup .blur-bg, #login-btn:hover .unvisable-div .login-popup .black-bg {
+#login-btn:hover .unvisable-div .login-popup .blur-bg,
+#login-btn:hover .unvisable-div .login-popup .black-bg {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -271,7 +272,8 @@
 .catalogs-obj:hover .unvisable-div .login-popup .vip-text:hover {
   color: #e88103;
 }
-.catalogs-obj:hover .unvisable-div .login-popup .blur-bg, .catalogs-obj:hover .unvisable-div .login-popup .black-bg {
+.catalogs-obj:hover .unvisable-div .login-popup .blur-bg,
+.catalogs-obj:hover .unvisable-div .login-popup .black-bg {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -440,6 +442,65 @@
   font-size: 13px;
   color: #8e8e8e;
   margin-right: 5px;
+}
+
+#easy-search {
+  position: relative;
+}
+
+#easy-search-result {
+  display: none;
+  width: 500px;
+  height: 300px;
+  top: 60px;
+  position: absolute;
+  flex-direction: column;
+  z-index: 20;
+}
+#easy-search-result .results-holder {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: end;
+}
+#easy-search-result #easy-search-text-result {
+  z-index: 14;
+  padding: 5px;
+  text-align: right;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+#easy-search-result .easy-search-result-simple {
+  z-index: 14;
+  width: 25%;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
+}
+#easy-search-result .blur-bg,
+#easy-search-result .black-bg {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+#easy-search-result .blur-bg {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  z-index: 11;
+}
+#easy-search-result .black-bg {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(7, 9, 11);
+  opacity: 0.7;
+  z-index: 12;
 }
 
 @font-face {
@@ -635,17 +696,20 @@
 #movie-all-info > .movie-scores .scores-bar .imdb-votes span:last-child {
   vertical-align: text-bottom;
 }
-#movie-all-info > .movie-scores .scores-bar .meter-score, #movie-all-info > .movie-scores .scores-bar .roten-score {
+#movie-all-info > .movie-scores .scores-bar .meter-score,
+#movie-all-info > .movie-scores .scores-bar .roten-score {
   margin-left: 10px;
   color: white;
   display: flex;
   align-items: center;
 }
-#movie-all-info > .movie-scores .scores-bar .meter-score img, #movie-all-info > .movie-scores .scores-bar .roten-score img {
+#movie-all-info > .movie-scores .scores-bar .meter-score img,
+#movie-all-info > .movie-scores .scores-bar .roten-score img {
   height: 24px;
   width: auto;
 }
-#movie-all-info > .movie-scores .scores-bar .meter-score span, #movie-all-info > .movie-scores .scores-bar .roten-score span {
+#movie-all-info > .movie-scores .scores-bar .meter-score span,
+#movie-all-info > .movie-scores .scores-bar .roten-score span {
   font-size: 14px;
   margin-left: 10px;
 }
@@ -662,20 +726,24 @@
 #movie-all-info > .movie-scores .userlike-bar > span {
   color: white;
 }
-#movie-all-info > .movie-scores .userlike-bar .dislike, #movie-all-info > .movie-scores .userlike-bar .dolike {
+#movie-all-info > .movie-scores .userlike-bar .dislike,
+#movie-all-info > .movie-scores .userlike-bar .dolike {
   font-size: 13px;
   display: flex;
   align-items: center;
   transition: all 500ms;
 }
-#movie-all-info > .movie-scores .userlike-bar .dislike:hover, #movie-all-info > .movie-scores .userlike-bar .dolike:hover {
+#movie-all-info > .movie-scores .userlike-bar .dislike:hover,
+#movie-all-info > .movie-scores .userlike-bar .dolike:hover {
   color: #e88103;
   cursor: pointer;
 }
-#movie-all-info > .movie-scores .userlike-bar .dislike span, #movie-all-info > .movie-scores .userlike-bar .dolike span {
+#movie-all-info > .movie-scores .userlike-bar .dislike span,
+#movie-all-info > .movie-scores .userlike-bar .dolike span {
   margin-right: 10px;
 }
-#movie-all-info > .movie-scores .userlike-bar .dislike i, #movie-all-info > .movie-scores .userlike-bar .dolike i {
+#movie-all-info > .movie-scores .userlike-bar .dislike i,
+#movie-all-info > .movie-scores .userlike-bar .dolike i {
   font-size: 18px;
   vertical-align: bottom;
 }
@@ -1340,7 +1408,8 @@
   width: 100%;
   justify-self: center;
 }
-#comment-area .comment-conditions div .login-btn, #comment-area .comment-conditions div .signup-btn {
+#comment-area .comment-conditions div .login-btn,
+#comment-area .comment-conditions div .signup-btn {
   padding: 10px 10px;
   color: rgb(239, 239, 239);
   text-align: center;
@@ -1446,10 +1515,12 @@
   border-radius: 20px;
   transform: translateY(20%);
 }
-#comment-area .comment-body .comment-likes .like-dislike .dislike-btn, #comment-area .comment-body .comment-likes .like-dislike .like-btn {
+#comment-area .comment-body .comment-likes .like-dislike .dislike-btn,
+#comment-area .comment-body .comment-likes .like-dislike .like-btn {
   transition: color 500ms;
 }
-#comment-area .comment-body .comment-likes .like-dislike .dislike-btn:hover, #comment-area .comment-body .comment-likes .like-dislike .like-btn:hover {
+#comment-area .comment-body .comment-likes .like-dislike .dislike-btn:hover,
+#comment-area .comment-body .comment-likes .like-dislike .like-btn:hover {
   cursor: pointer;
   color: #e88103;
 }

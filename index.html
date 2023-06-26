@@ -1074,8 +1074,8 @@
             <li><a href="#">پخش آنلاین</a></li>
           </ul>
         </li>
-        <li class="input-look">
-          <div>
+        <li class="input-look" id="easy-search">
+          <div id="easy-search-btn">
             <img
               class="icon"
               src="./images/icons/loupe.png"
@@ -1083,9 +1083,45 @@
             />
           </div>
           <input
+          id="easy-search-input"
             type="text"
             placeholder="نام فیلم ، سریال مورد نظر را وارد کنید ..."
           />
+          <span id="easy-search-result" class="unvisable-div">
+            <a target="_blank" href="" style="display: none;" class="moviepost vitrin easy-search-result-simple" data-post-link="" data-quality="" data-score="" data-movie-name="" data-bg-path="">
+              <img class="poster"  src="" alt="Sonic Prime 2022">
+              <span class="isSubtitle">
+                <span> زیرنویس </span>
+              </span>
+              <span class="score">
+                <span>9.0</span>
+                <span>/</span>
+                <span>10</span>
+              </span>
+              <span class="like">56% <i class="fa-light fa-thumbs-up"></i></span>
+              <span class="playicon" style="display: none;">
+                <span>
+                  <img src="./images/icons/play-button.png" alt="">
+                </span>
+              </span>
+            </a>
+          
+              <div id="easy-search-text-result">
+                نتایج جستوجو
+              </div>
+            <div class="results-holder">
+             
+            </div>
+             
+              <div class="blur-bg">
+                
+               </div>
+               <div class="black-bg">
+
+               </div>
+               
+          
+          </span>
         </li>
         <li class="input-look dark-mode">
           <!--background Circle-->

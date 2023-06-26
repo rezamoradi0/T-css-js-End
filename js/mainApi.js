@@ -191,12 +191,51 @@ let simple_hlheader=document.getElementById("simple-hlheader").cloneNode(true);
 		afterThis=hlist;
 	}
 }
+let simpleEasySearchResult=document.querySelector(".easy-search-result-simple");
+let resultHolder=document.querySelector(".results-holder");
+function EasySearching(text) {
+	let counter=0;
+	resultHolder.querySelectorAll("a").forEach(thePost=>{
+		thePost.remove();
+	});
+	setTimeout(()=>{
+		serachResShowing=true;
+	},200);
+	allDataBase.forEach(post => {
+		
+			if(counter<3){
+			
+			
+		
+		if(post.postName.toLowerCase().startsWith(text.toLowerCase())){
+			counter++;
+			let result_item=simpleEasySearchResult.cloneNode(true);
+			result_item.style.display="flex";
+			result_item.querySelector("img").src=post.postBgImage;
+			result_item.querySelector("img").alt=post.postName;
+			
+			if(post.langType=="sub"){
+				result_item.querySelector(".isSubtitle").textContent="زیرنویس";
+			}else {
+				result_item.querySelector(".isSubtitle").textContent="اصلی";
+			}
+			resultHolder.appendChild(result_item);
+			console.log(result_item);
+		}else {
+		
+		}
+			}
+	});
 
 
+	document.getElementById("easy-search-result").style.display="flex";
+}
+let allDataBase;
 
 let myFetch=fetch("./json/main.json");
 myFetch.then(result =>result.json()).then(result =>{
 	GetVitrinInfo(result.vitrin);
 	UpdatePosters(result.updated_series);
 	GetCategorys(result.categorys);
+	allDataBase=result.allPosts;
 });
