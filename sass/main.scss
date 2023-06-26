@@ -11,6 +11,12 @@ body {
     margin: 0;
     background-color: $darkColor;
     padding-bottom: 40px;
+    &::-webkit-scrollbar{
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color:lighten($color: $darkColor, $amount: 20);
+    }
 }
 
 .btn {
@@ -221,6 +227,9 @@ header {
 
 #moving-list {
     @include moving-list();
+    &::-webkit-scrollbar {
+        width: 10px;
+      }
 }
 
 .moviepost {

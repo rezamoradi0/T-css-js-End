@@ -328,7 +328,25 @@
 .visable-list .list-subjects .list-subject {
   padding: 18px 3.5rem;
   border-radius: 16px;
+  font-size: 14px;
   background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.visable-list .list-subjects .list-subject > i {
+  font-size: 22px;
+  text-align: right;
+}
+.visable-list .list-subjects .list-subject > i.thisRound {
+  padding: 3px 5px;
+  font-size: 16px;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+.visable-list .list-subjects .list-subject > span {
+  margin-right: 10px;
 }
 .visable-list .list-subjects .list-subject.selected {
   background-color: rgb(7, 9, 11);
@@ -343,6 +361,9 @@
 }
 .visable-list .list-of-subjects > div.visable {
   display: grid;
+}
+.visable-list .list-of-subjects .grid-5col {
+  grid-template-columns: repeat(5, 1fr);
 }
 .visable-list .list-of-subjects .grid-3col {
   grid-template-columns: repeat(3, 1fr);
@@ -359,6 +380,8 @@
   text-align: right;
 }
 .visable-list .list-of-subjects .grid-2col li {
+  margin-top: 8px;
+  margin-bottom: 8px;
   display: block;
 }
 .visable-list .list-of-subjects .flex-list-col {
@@ -386,14 +409,32 @@
   display: flex;
   align-items: center;
 }
+.visable-list .list-of-subjects .item-normal.low-margin {
+  margin: 8px 10px;
+  width: 100%;
+  text-align: right;
+}
 .visable-list .list-of-subjects .item-normal .item-link {
   text-decoration: none;
   color: rgb(239, 239, 239);
+  font-size: 14px;
   padding-right: 10px;
+}
+.visable-list .list-of-subjects .item-normal .item-link .movie-count {
+  font-size: 12px;
+  color: #bcbcbc;
+  transition: all 500ms;
+  margin-right: 2px;
 }
 .visable-list .list-of-subjects .item-normal .item-link:hover {
   margin-right: 10px;
   color: #e88103;
+}
+.visable-list .list-of-subjects .item-normal .item-link:hover .movie-count {
+  color: #b66502;
+}
+.visable-list .list-of-subjects .item-normal .item-link.dont-move {
+  margin-right: 0px;
 }
 .visable-list .list-of-subjects .item-normal .item-count {
   font-size: 13px;
@@ -422,6 +463,12 @@ body {
   margin: 0;
   background-color: rgb(7, 9, 11);
   padding-bottom: 40px;
+}
+body::-webkit-scrollbar {
+  background-color: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #2f3c49;
 }
 
 .btn {
@@ -687,6 +734,9 @@ header .sub-menu .login-btn {
 #moving-list > div .like, #moving-list > a .like {
   right: 10px;
   left: auto;
+}
+#moving-list::-webkit-scrollbar {
+  width: 10px;
 }
 
 .moviepost {

@@ -2064,7 +2064,27 @@ transition: all 500ms;
         .list-subject{
             padding: 18px 3.5rem;
             border-radius: 16px;
+            font-size: 14px;
             background-color: transparent;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            &>i{
+                font-size: 22px;
+                
+                text-align: right;
+                &.thisRound{
+                    padding:3px 5px;
+                    font-size: 16px;
+                    border: 2px solid white;
+                    border-radius: 10px;
+                }
+            }
+            &>span{
+                margin-right: 10px;
+            }
             &.selected{
                 background-color: $darkColor;
             }
@@ -2081,7 +2101,9 @@ transition: all 500ms;
                 display: grid;
             }
         }
-
+        .grid-5col{
+            grid-template-columns: repeat(5,1fr);
+        }
         .grid-3col{
             grid-template-columns: repeat(3,1fr);
         }
@@ -2096,6 +2118,8 @@ transition: all 500ms;
             padding-right: 0px;
             text-align: right;
             li{
+                margin-top: 8px;
+                margin-bottom: 8px;
                 display: block;
             }
         }
@@ -2123,15 +2147,29 @@ transition: all 500ms;
             margin: 20px 10px;
             display: flex;
             align-items: center;
-
+            &.low-margin{
+                margin: 8px 10px;
+                width: 100%;
+                text-align: right;
+            }
             .item-link{
                 text-decoration: none;
                 color: $lightText;
-              
+                font-size: 14px;
                 padding-right: 10px;
+                .movie-count{
+                    font-size: 12px;
+                    color: darken($color: $lightText, $amount: 20);
+                    transition: all 500ms;
+                    margin-right: 2px;
+                }
                 &:hover{
                    margin-right: 10px;
                    color: $Orange;
+                   .movie-count{  color: darken($color: $Orange, $amount: 10);}
+                }
+                &.dont-move{
+                    margin-right: 0px
                 }
             }
             .item-count{
